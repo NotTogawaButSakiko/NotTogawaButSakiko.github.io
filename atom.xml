@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Sakiko&#39;s Blog</title>
+  
+  <subtitle>也许有朝一日，我将升的更高。</subtitle>
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2024-09-03T02:27:50.500Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>不是丰川是祥子</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试</title>
+    <link href="http://example.com/2024/08/27/hello-world/"/>
+    <id>http://example.com/2024/08/27/hello-world/</id>
+    <published>2024-08-27T08:19:02.489Z</published>
+    <updated>2024-09-03T02:27:50.500Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="算法是什么"><a href="#算法是什么" class="headerlink" title="算法是什么"></a>算法是什么</h1><p><strong>算法</strong>（algorithm）就是任何 良定义 的计算过程，该过程取某个值或值的集合作为<strong>输入</strong>并产生某个值或值的集合作为<strong>输出</strong>，即是把输入换成输出的计算步骤的一个序列。</p><p>算法也可以看成是用于<strong>计算问题</strong>的工具，即描述一个特定的计算过程来实现问题所期望的输入&#x2F;输出关系。</p><p>*[良定义]: 良定义是指完全符合ISO标准而不存在任何歧义的定义，即well-defined。</p><h1 id="算法的特征"><a href="#算法的特征" class="headerlink" title="算法的特征"></a>算法的特征</h1><ul><li><strong>有穷性</strong>（Finiteness）：算法的有穷性是指算法必须能在执行<strong>有限</strong>个步骤之后终止；</li><li><strong>确定性</strong>（Definiteness）：算法的每一步骤必须有确切的定义；</li><li><strong>输入项</strong>（Input）：一个算法有0个或多个输入，以刻画运算对象的初始情况（所谓0个输入是指算法本身定出了初始条件）；</li><li><strong>输出项</strong>（Output）：一个算法有一个或多个输出，以反映对输入数据加工后的结果。没有输出的算法是<strong>毫无意义</strong>的；</li><li><strong>可行性</strong>（Effectiveness）：算法中执行的任何计算步骤都是可以被分解为基本的可执行的操作步骤，即每个计算步骤都可以在<strong>有限时间</strong>内完成（也称之为有效性）。</li></ul><h1 id="算法的评价"><a href="#算法的评价" class="headerlink" title="算法的评价"></a>算法的评价</h1><h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><p>一个算法中的语句<strong>最坏情况</strong>下<strong>执行次数</strong>称为语句频度或时间频度，记为$T(n)$；</p><p>若存在$f(n)$,使 $\lim_{n-&gt;∞}\frac{T(n)}{f(n)}$ 为不等于零的常数，则称$f(n)$为$T(n)$的<strong>同数量级(阶)函数</strong>，记作</p><p>$$T(n) &#x3D; O(f(n))$$</p><p>称$O(f(n))$为算法$T(n)$的<strong>渐进时间复杂度</strong>，简称<strong>时间复杂度</strong>。</p><h3 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h3><ol><li>取最大的项</li><li>省略掉所有的<strong>常数系数</strong>、<strong>常数底数</strong>、<strong>常数项</strong></li></ol><h3 id="渐进符号"><a href="#渐进符号" class="headerlink" title="渐进符号"></a>渐进符号</h3><h4 id="Θ-记号（渐进紧确界）"><a href="#Θ-记号（渐进紧确界）" class="headerlink" title="$Θ$记号（渐进紧确界）"></a>$Θ$记号（渐进紧确界）</h4><p>对于函数 $f(n)$ 和 $g(n)$，$f(n)&#x3D;Θ(g(n))$，当且仅当 $\exist c_1,c_2,n_0&gt;0$，使得 $\forall n ≥ n_0,0≤ c_1·g(n) ≤ f(n) ≤ c_2 · g(n)$。</p><p>也就是说，如果函数 $f(n)&#x3D;Θ(g(n))$，那么我们能找到两个正数 $c_1,c_2$ 使得 $f(n)$ 被 $c_1·g(n)$ 和 $c_2·g(n)$ 夹在中间。</p><h4 id="O-记号（渐进紧确上界）"><a href="#O-记号（渐进紧确上界）" class="headerlink" title="$O$ 记号（渐进紧确上界）"></a>$O$ 记号（渐进紧确上界）</h4><p>对于函数 $f(n)$ 和 $g(n)$，$f(n)&#x3D;Θ(g(n))$，当且仅当 $\exist c,n_0&gt;0$，使得 $\forall n ≥ n_0,0 ≤ f(n) ≤ c · g(n)$。</p><p>也就是说，如果函数 $f(n)&#x3D;Θ(g(n))$，那么我们能找到一个正数 $c$ 使得 $f(n)$ 在 $c·g(n)$  下面。</p><h4 id="Ω-记号（渐进紧确下界）"><a href="#Ω-记号（渐进紧确下界）" class="headerlink" title="$Ω$记号（渐进紧确下界）"></a>$Ω$记号（渐进紧确下界）</h4><p>对于函数 $f(n)$ 和 $g(n)$，$f(n)&#x3D;Θ(g(n))$，当且仅当 $\exist c,n_0&gt;0$，使得 $\forall n ≥ n_0,0 ≤ c · g(n) ≤ f(n)$。</p><p>也就是说，如果函数 $f(n)&#x3D;Θ(g(n))$，那么我们能找到一个正数 $c$ 使得 $f(n)$ 在 $c·g(n)$  上面。</p><h3 id="主定理（M定理）"><a href="#主定理（M定理）" class="headerlink" title="主定理（M定理）"></a>主定理（M定理）</h3><p>主定理为用来计算递归时间复杂度的定理（Master Theorem）</p><p>假设我们用递归递推式$$T(n) &#x3D; aT(\frac{n}{b})+f(n)$$</p><p>其中 $a$ 为递归子问题的数量，$\frac{n}{b}$ 为每个子问题的规模，$f(n)$ 为分解和合并的时间。</p><p> 那么就会有三种情况：<br> <img src="https://i-blog.csdnimg.cn/blog_migrate/589694106496fb64cbee55c9eac7d15f.jpeg#pic_center" alt="选自《算法导论》"></p><ul><li>当 $f(n)$ 比 $n^{log_ba}$ 小时，$T(n) &#x3D; Θ(n^{log_ba})$</li><li>当 $f(n)$ 趋近于 $n^{log_ba}$ 时，$T(n) &#x3D; Θ(n^{log_ba}logn)$</li><li>当 $f(n)$ 比 $n^{log_ba}$ 大时，$T(n) &#x3D; Θ(f(n))$</li></ul><h4 id="二分查找的时间复杂度"><a href="#二分查找的时间复杂度" class="headerlink" title="二分查找的时间复杂度"></a>二分查找的时间复杂度</h4><p>$$T(n) &#x3D; T(\frac{n}{2}) + O(1) &#x3D; Θ(logn)$$</p><h4 id="归并排序的时间复杂度"><a href="#归并排序的时间复杂度" class="headerlink" title="归并排序的时间复杂度"></a>归并排序的时间复杂度</h4><p>$$T(n) &#x3D; 2T(\frac{n}{2}) + O(n) &#x3D; Θ(nlogn)$$</p><h4 id="二叉树遍历的时间复杂度"><a href="#二叉树遍历的时间复杂度" class="headerlink" title="二叉树遍历的时间复杂度"></a>二叉树遍历的时间复杂度</h4><p>$$T(n) &#x3D; 2T(\frac{n}{2}) + O(1) &#x3D; Θ(n)$$</p><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><h4 id="常数时间"><a href="#常数时间" class="headerlink" title="常数时间"></a>常数时间</h4><p>若对于一个算法，$T(n)$与输入大小无关，则称其具有<strong>常数时间</strong>，记作$O(1)$时间。<br><img src="https://i-blog.csdnimg.cn/blog_migrate/81af67a38b8cfe0640e4ec161be919c9.png#pic_center" alt="常数时间"></p><h4 id="线性时间"><a href="#线性时间" class="headerlink" title="线性时间"></a>线性时间</h4><p>如果一个算法的时间复杂度为$O(n)$，则称这个算法具有<strong>线性时间</strong>，或$O(n)$时间。<br><img src="https://i-blog.csdnimg.cn/blog_migrate/ce8c3e45b55816c526b47186d243a0c0.png#pic_center" alt="线性时间"></p><h4 id="O-n-2-时间"><a href="#O-n-2-时间" class="headerlink" title="$O(n^2)$时间"></a>$O(n^2)$时间</h4><p><img src="https://i-blog.csdnimg.cn/blog_migrate/f706b43229c158572d99c249fe431aeb.png#pic_center" alt="O(n^2)时间"><br>以及$O(n^3)$时间，$O(n^4)$时间等</p><h4 id="对数时间"><a href="#对数时间" class="headerlink" title="对数时间"></a>对数时间</h4><p>若算法的$T(n) &#x3D;O(logn)$，则称其具有<strong>对数时间</strong>。由于计算机使用二进制的记数系统，对数常常<strong>以2为底</strong>（即l$og_2n$，有时写作$lgn$）。<br><img src="https://i-blog.csdnimg.cn/blog_migrate/24f94c9acec12fa7e24a5d4ad0f19a0d.png#pic_center" alt="对数时间"><br>推导：<br>设$T(n) &#x3D; log_an$，由换底公式可得$log_an &#x3D; \frac{lnn}{lna}$,因为$lna$为常数项，省略，所以$log_an$与$lnn$为同一数量级函数，所以底数无意义，可省略。</p><h4 id="线性对数时间"><a href="#线性对数时间" class="headerlink" title="线性对数时间"></a>线性对数时间</h4><p>若一个算法时间复杂度$T(n) &#x3D; O(nlog n)$，则称这个算法具有<strong>线性对数时间。</strong><img src="https://i-blog.csdnimg.cn/blog_migrate/80755fb6aa7c6c0e093825caa1721bea.png#pic_center" alt="线性对数时间"></p><h4 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h4><p>一般来说，$O(n^2) &gt; O(n logn) &gt; O(n) &gt; O(logn) &gt; O(1)$<br><img src="https://i-blog.csdnimg.cn/blog_migrate/95740b982d1ddd928d2ccd146278c948.png#pic_center" alt="时间复杂度比较"></p><h3 id="关于时间复杂度"><a href="#关于时间复杂度" class="headerlink" title="关于时间复杂度"></a>关于时间复杂度</h3><p>根据估计，电脑一秒钟大约能进行<strong>1亿次</strong>运算。据经验，当时间复杂度在<strong>2000w以下</strong>时，一般认为程序能在<strong>1s</strong>内跑完</p><h2 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h2><p>一个算法所耗费的存储空间记为$S(n)$；</p><p>若存在$f(n)$,使$n$趋近于无穷大时，$\frac{S(n)}{f(n)}$为不等于零的常数，则称$f(n)$为$S(n)$的<strong>同数量级函数</strong>，记作</p><p>$$S(n) &#x3D; O(f(n))$$</p><p>称$O(f(n))$为算法$S(n)$的<strong>渐进空间复杂度</strong>，简称<strong>空间复杂度</strong>。</p><h2 id="时空复杂度"><a href="#时空复杂度" class="headerlink" title="时空复杂度"></a>时空复杂度</h2><p>时间复杂度和空间复杂度往往是相互影响的。当追求一个较好的时间复杂度时，可能会使空间复杂度的性能变差，即可能导致占用较多的存储空间；反之，当追求一个较好的空间复杂度时，可能会使时间复杂度的性能变差，即可能导致占用较长的运行时间。</p><p>算法的时间复杂度和空间复杂度合称为<strong>算法的复杂度</strong>。</p><h1 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h1><h2 id="初级算法"><a href="#初级算法" class="headerlink" title="初级算法"></a>初级算法</h2><h2 id="进阶算法"><a href="#进阶算法" class="headerlink" title="进阶算法"></a>进阶算法</h2><ol><li>2.0 线性优化策略</li><li>2.1分治与倍增</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;算法是什么&quot;&gt;&lt;a href=&quot;#算法是什么&quot; class=&quot;headerlink&quot; title=&quot;算法是什么&quot;&gt;&lt;/a&gt;算法是什么&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;算法&lt;/strong&gt;（algorithm）就是任何 良定义 的计算过程，该过程取某个值或值的集合作</summary>
+      
+    
+    
+    
+    <category term="测试" scheme="http://example.com/categories/%E6%B5%8B%E8%AF%95/"/>
+    
+    
+    <category term="测试" scheme="http://example.com/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+</feed>
