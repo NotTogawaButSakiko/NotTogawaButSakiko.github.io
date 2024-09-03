@@ -1501,7 +1501,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #f7b124;
+    background: #11adff;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2809,6 +2809,13 @@ ul.breadcrumb li:last-child {
     border-bottom-color: #eee;
     color: #eee;
   }
+}
+mjx-container[jax='CHTML'][display='true'],
+.has-jax {
+  overflow: auto hidden;
+}
+mjx-container[display='true'] + br {
+  display: none;
 }
 .use-motion .animated {
   animation-fill-mode: none;
