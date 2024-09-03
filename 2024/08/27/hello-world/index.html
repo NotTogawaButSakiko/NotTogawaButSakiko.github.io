@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
-
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -20,26 +20,21 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="算法是什么算法（algorithm）就是任何 良定义 的计算过程，该过程取某个值或值的集合作为输入并产生某个值或值的集合作为输出，即是把输入换成输出的计算步骤的一个序列。 算法也可以看成是用于计算问题的工具，即描述一个特定的计算过程来实现问题所期望的输入&#x2F;输出关系。 *[良定义]: 良定义是指完全符合ISO标准而不存在任何歧义的定义，即well-defined。 算法的特征 有穷性（Fi">
+    <meta name="description" content="D 的 Sol 参考自 Unique_Hanpi，部分 $LateX$ 来源于 cxm1024 A.holiday 假期计划题意：给定一个 $n$ 个点 $m$ 条边组成的无向图，保证无自环和重边， 每个点有点权。 选出四个点 $a_i$，使这四个点点权之和最大，且满足以下性质：  $\operatorname{dis}(a_i,a_{i+1}) \le k + 1, i \in [1, 3]$">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="测试">
 <meta property="og:url" content="http://example.com/2024/08/27/hello-world/index.html">
 <meta property="og:site_name" content="Sakiko&#39;s Blog">
-<meta property="og:description" content="算法是什么算法（algorithm）就是任何 良定义 的计算过程，该过程取某个值或值的集合作为输入并产生某个值或值的集合作为输出，即是把输入换成输出的计算步骤的一个序列。 算法也可以看成是用于计算问题的工具，即描述一个特定的计算过程来实现问题所期望的输入&#x2F;输出关系。 *[良定义]: 良定义是指完全符合ISO标准而不存在任何歧义的定义，即well-defined。 算法的特征 有穷性（Fi">
+<meta property="og:description" content="D 的 Sol 参考自 Unique_Hanpi，部分 $LateX$ 来源于 cxm1024 A.holiday 假期计划题意：给定一个 $n$ 个点 $m$ 条边组成的无向图，保证无自环和重边， 每个点有点权。 选出四个点 $a_i$，使这四个点点权之和最大，且满足以下性质：  $\operatorname{dis}(a_i,a_{i+1}) \le k + 1, i \in [1, 3]$">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://i-blog.csdnimg.cn/blog_migrate/589694106496fb64cbee55c9eac7d15f.jpeg#pic_center">
-<meta property="og:image" content="https://i-blog.csdnimg.cn/blog_migrate/81af67a38b8cfe0640e4ec161be919c9.png#pic_center">
-<meta property="og:image" content="https://i-blog.csdnimg.cn/blog_migrate/ce8c3e45b55816c526b47186d243a0c0.png#pic_center">
-<meta property="og:image" content="https://i-blog.csdnimg.cn/blog_migrate/f706b43229c158572d99c249fe431aeb.png#pic_center">
-<meta property="og:image" content="https://i-blog.csdnimg.cn/blog_migrate/24f94c9acec12fa7e24a5d4ad0f19a0d.png#pic_center">
-<meta property="og:image" content="https://i-blog.csdnimg.cn/blog_migrate/80755fb6aa7c6c0e093825caa1721bea.png#pic_center">
-<meta property="og:image" content="https://i-blog.csdnimg.cn/blog_migrate/95740b982d1ddd928d2ccd146278c948.png#pic_center">
+<meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/sl444api.png">
+<meta property="og:image" content="https://cdn.luogu.com.cn/upload/image_hosting/45feq5sk.png">
 <meta property="article:published_time" content="2024-08-27T08:19:02.489Z">
-<meta property="article:modified_time" content="2024-09-03T13:06:58.350Z">
+<meta property="article:modified_time" content="2024-09-03T13:33:13.246Z">
 <meta property="article:author" content="不是丰川是祥子">
 <meta property="article:tag" content="测试">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i-blog.csdnimg.cn/blog_migrate/589694106496fb64cbee55c9eac7d15f.jpeg#pic_center">
+<meta name="twitter:image" content="https://cdn.luogu.com.cn/upload/image_hosting/sl444api.png">
 
 
 <link rel="canonical" href="http://example.com/2024/08/27/hello-world/">
@@ -98,7 +93,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">1</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">1</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">1</span></a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">1</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">1</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">1</span></a></li>
   </ul>
 </nav>
 
@@ -123,7 +118,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.</span> <span class="nav-text">算法是什么</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E7%9A%84%E7%89%B9%E5%BE%81"><span class="nav-number">2.</span> <span class="nav-text">算法的特征</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E7%9A%84%E8%AF%84%E4%BB%B7"><span class="nav-number">3.</span> <span class="nav-text">算法的评价</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">3.1.</span> <span class="nav-text">时间复杂度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97"><span class="nav-number">3.1.1.</span> <span class="nav-text">计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%90%E8%BF%9B%E7%AC%A6%E5%8F%B7"><span class="nav-number">3.1.2.</span> <span class="nav-text">渐进符号</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%CE%98-%E8%AE%B0%E5%8F%B7%EF%BC%88%E6%B8%90%E8%BF%9B%E7%B4%A7%E7%A1%AE%E7%95%8C%EF%BC%89"><span class="nav-number">3.1.2.1.</span> <span class="nav-text">$Θ$记号（渐进紧确界）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#O-%E8%AE%B0%E5%8F%B7%EF%BC%88%E6%B8%90%E8%BF%9B%E7%B4%A7%E7%A1%AE%E4%B8%8A%E7%95%8C%EF%BC%89"><span class="nav-number">3.1.2.2.</span> <span class="nav-text">$O$ 记号（渐进紧确上界）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%CE%A9-%E8%AE%B0%E5%8F%B7%EF%BC%88%E6%B8%90%E8%BF%9B%E7%B4%A7%E7%A1%AE%E4%B8%8B%E7%95%8C%EF%BC%89"><span class="nav-number">3.1.2.3.</span> <span class="nav-text">$Ω$记号（渐进紧确下界）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BB%E5%AE%9A%E7%90%86%EF%BC%88M%E5%AE%9A%E7%90%86%EF%BC%89"><span class="nav-number">3.1.3.</span> <span class="nav-text">主定理（M定理）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">3.1.3.1.</span> <span class="nav-text">二分查找的时间复杂度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">3.1.3.2.</span> <span class="nav-text">归并排序的时间复杂度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">3.1.3.3.</span> <span class="nav-text">二叉树遍历的时间复杂度</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E7%B1%BB"><span class="nav-number">3.1.4.</span> <span class="nav-text">分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%B8%E6%95%B0%E6%97%B6%E9%97%B4"><span class="nav-number">3.1.4.1.</span> <span class="nav-text">常数时间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E6%97%B6%E9%97%B4"><span class="nav-number">3.1.4.2.</span> <span class="nav-text">线性时间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#O-n-2-%E6%97%B6%E9%97%B4"><span class="nav-number">3.1.4.3.</span> <span class="nav-text">$O(n^2)$时间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AF%B9%E6%95%B0%E6%97%B6%E9%97%B4"><span class="nav-number">3.1.4.4.</span> <span class="nav-text">对数时间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BA%BF%E6%80%A7%E5%AF%B9%E6%95%B0%E6%97%B6%E9%97%B4"><span class="nav-number">3.1.4.5.</span> <span class="nav-text">线性对数时间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%AF%94%E8%BE%83"><span class="nav-number">3.1.4.6.</span> <span class="nav-text">比较</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">3.1.5.</span> <span class="nav-text">关于时间复杂度</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">3.2.</span> <span class="nav-text">空间复杂度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%B6%E7%A9%BA%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="nav-number">3.3.</span> <span class="nav-text">时空复杂度</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%97%E6%B3%95"><span class="nav-number">4.</span> <span class="nav-text">算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E7%BA%A7%E7%AE%97%E6%B3%95"><span class="nav-number">4.1.</span> <span class="nav-text">初级算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E9%98%B6%E7%AE%97%E6%B3%95"><span class="nav-number">4.2.</span> <span class="nav-text">进阶算法</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#A-holiday-%E5%81%87%E6%9C%9F%E8%AE%A1%E5%88%92"><span class="nav-number">1.</span> <span class="nav-text">A.holiday 假期计划</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#B-game-%E7%AD%96%E7%95%A5%E6%B8%B8%E6%88%8F"><span class="nav-number">2.</span> <span class="nav-text">B.game 策略游戏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C-galaxy-%E6%98%9F%E6%88%98"><span class="nav-number">3.</span> <span class="nav-text">C.galaxy 星战</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#D-transmit-%E6%95%B0%E6%8D%AE%E8%BF%90%E8%BE%93"><span class="nav-number">4.</span> <span class="nav-text">D.transmit 数据运输</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#begin-bmatrix-f-i-1-0-f-i-1-1-f-i-1-2-end-bmatrix-cdot-begin-bmatrix-val-i-0-infty-val-i-val-mn-i-0-val-i-infty-infty-end-bmatrix"><span class="nav-number">5.</span> <span class="nav-text">$$\begin{bmatrix}f_{i-1,0} &amp; f_{i-1,1} &amp; f_{i-1,2}\\end{bmatrix}\cdot\begin{bmatrix}val_i &amp; 0 &amp; +\infty\val_i &amp; val_{mn_i} &amp; 0\val_i &amp; +\infty &amp; +\infty\end{bmatrix}</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -252,7 +247,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-09-03 21:06:58" itemprop="dateModified" datetime="2024-09-03T21:06:58+08:00">2024-09-03</time>
+      <time title="修改时间：2024-09-03 21:33:13" itemprop="dateModified" datetime="2024-09-03T21:33:13+08:00">2024-09-03</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -271,14 +266,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.5k</span>
+      <span>1.6k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>5 分钟</span>
+      <span>6 分钟</span>
     </span>
 </div>
 
@@ -288,59 +283,64 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="算法是什么"><a href="#算法是什么" class="headerlink" title="算法是什么"></a>算法是什么</h1><p><strong>算法</strong>（algorithm）就是任何 良定义 的计算过程，该过程取某个值或值的集合作为<strong>输入</strong>并产生某个值或值的集合作为<strong>输出</strong>，即是把输入换成输出的计算步骤的一个序列。</p>
-<p>算法也可以看成是用于<strong>计算问题</strong>的工具，即描述一个特定的计算过程来实现问题所期望的输入&#x2F;输出关系。</p>
-<p>*[良定义]: 良定义是指完全符合ISO标准而不存在任何歧义的定义，即well-defined。</p>
-<h1 id="算法的特征"><a href="#算法的特征" class="headerlink" title="算法的特征"></a>算法的特征</h1><ul>
-<li><strong>有穷性</strong>（Finiteness）：算法的有穷性是指算法必须能在执行<strong>有限</strong>个步骤之后终止；</li>
-<li><strong>确定性</strong>（Definiteness）：算法的每一步骤必须有确切的定义；</li>
-<li><strong>输入项</strong>（Input）：一个算法有0个或多个输入，以刻画运算对象的初始情况（所谓0个输入是指算法本身定出了初始条件）；</li>
-<li><strong>输出项</strong>（Output）：一个算法有一个或多个输出，以反映对输入数据加工后的结果。没有输出的算法是<strong>毫无意义</strong>的；</li>
-<li><strong>可行性</strong>（Effectiveness）：算法中执行的任何计算步骤都是可以被分解为基本的可执行的操作步骤，即每个计算步骤都可以在<strong>有限时间</strong>内完成（也称之为有效性）。</li>
-</ul>
-<h1 id="算法的评价"><a href="#算法的评价" class="headerlink" title="算法的评价"></a>算法的评价</h1><h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><p>一个算法中的语句<strong>最坏情况</strong>下<strong>执行次数</strong>称为语句频度或时间频度，记为$T(n)$；</p>
-<p>若存在$f(n)$,使 $\lim_{n-&gt;∞}\frac{T(n)}{f(n)}$ 为不等于零的常数，则称$f(n)$为$T(n)$的<strong>同数量级(阶)函数</strong>，记作</p>
-<p>$$T(n) &#x3D; O(f(n))$$</p>
-<p>称$O(f(n))$为算法$T(n)$的<strong>渐进时间复杂度</strong>，简称<strong>时间复杂度</strong>。</p>
-<h3 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h3><ol>
-<li>取最大的项</li>
-<li>省略掉所有的<strong>常数系数</strong>、<strong>常数底数</strong>、<strong>常数项</strong></li>
-</ol>
-<h3 id="渐进符号"><a href="#渐进符号" class="headerlink" title="渐进符号"></a>渐进符号</h3><h4 id="Θ-记号（渐进紧确界）"><a href="#Θ-记号（渐进紧确界）" class="headerlink" title="$Θ$记号（渐进紧确界）"></a>$Θ$记号（渐进紧确界）</h4><p>对于函数 $f(n)$ 和 $g(n)$，$f(n)&#x3D;Θ(g(n))$，当且仅当 $\exist c_1,c_2,n_0&gt;0$，使得 $\forall n ≥ n_0,0≤ c_1·g(n) ≤ f(n) ≤ c_2 · g(n)$。</p>
-<p>也就是说，如果函数 $f(n)&#x3D;Θ(g(n))$，那么我们能找到两个正数 $c_1,c_2$ 使得 $f(n)$ 被 $c_1·g(n)$ 和 $c_2·g(n)$ 夹在中间。</p>
-<h4 id="O-记号（渐进紧确上界）"><a href="#O-记号（渐进紧确上界）" class="headerlink" title="$O$ 记号（渐进紧确上界）"></a>$O$ 记号（渐进紧确上界）</h4><p>对于函数 $f(n)$ 和 $g(n)$，$f(n)&#x3D;Θ(g(n))$，当且仅当 $\exist c,n_0&gt;0$，使得 $\forall n ≥ n_0,0 ≤ f(n) ≤ c · g(n)$。</p>
-<p>也就是说，如果函数 $f(n)&#x3D;Θ(g(n))$，那么我们能找到一个正数 $c$ 使得 $f(n)$ 在 $c·g(n)$  下面。</p>
-<h4 id="Ω-记号（渐进紧确下界）"><a href="#Ω-记号（渐进紧确下界）" class="headerlink" title="$Ω$记号（渐进紧确下界）"></a>$Ω$记号（渐进紧确下界）</h4><p>对于函数 $f(n)$ 和 $g(n)$，$f(n)&#x3D;Θ(g(n))$，当且仅当 $\exist c,n_0&gt;0$，使得 $\forall n ≥ n_0,0 ≤ c · g(n) ≤ f(n)$。</p>
-<p>也就是说，如果函数 $f(n)&#x3D;Θ(g(n))$，那么我们能找到一个正数 $c$ 使得 $f(n)$ 在 $c·g(n)$  上面。</p>
-<h3 id="主定理（M定理）"><a href="#主定理（M定理）" class="headerlink" title="主定理（M定理）"></a>主定理（M定理）</h3><p>主定理为用来计算递归时间复杂度的定理（Master Theorem）</p>
-<p>假设我们用递归递推式$$T(n) &#x3D; aT(\frac{n}{b})+f(n)$$</p>
-<p>其中 $a$ 为递归子问题的数量，$\frac{n}{b}$ 为每个子问题的规模，$f(n)$ 为分解和合并的时间。</p>
-<p> 那么就会有三种情况：<br> <img src="https://i-blog.csdnimg.cn/blog_migrate/589694106496fb64cbee55c9eac7d15f.jpeg#pic_center" alt="选自《算法导论》"></p>
+    <div class="post-body" itemprop="articleBody"><p>D 的 Sol 参考自 Unique_Hanpi，部分 $LateX$ 来源于 cxm1024</p>
+<h1 id="A-holiday-假期计划"><a href="#A-holiday-假期计划" class="headerlink" title="A.holiday 假期计划"></a>A.holiday 假期计划</h1><p>题意：给定一个 $n$ 个点 $m$ 条边组成的无向图，保证无自环和重边， 每个点有点权。</p>
+<p>选出四个点 $a_i$，使这四个点点权之和最大，且满足以下性质：</p>
 <ul>
-<li>当 $f(n)$ 比 $n^{log_ba}$ 小时，$T(n) &#x3D; Θ(n^{log_ba})$</li>
-<li>当 $f(n)$ 趋近于 $n^{log_ba}$ 时，$T(n) &#x3D; Θ(n^{log_ba}logn)$</li>
-<li>当 $f(n)$ 比 $n^{log_ba}$ 大时，$T(n) &#x3D; Θ(f(n))$</li>
+<li>$\operatorname{dis}(a_i,a_{i+1}) \le k + 1, i \in [1, 3]$</li>
+<li>$\operatorname{dis}(1, a_1) \le k + 1, \operatorname{dis}(a_4, 1) \le k + 1$</li>
 </ul>
-<h4 id="二分查找的时间复杂度"><a href="#二分查找的时间复杂度" class="headerlink" title="二分查找的时间复杂度"></a>二分查找的时间复杂度</h4><p>$$T(n) &#x3D; T(\frac{n}{2}) + O(1) &#x3D; Θ(logn)$$</p>
-<h4 id="归并排序的时间复杂度"><a href="#归并排序的时间复杂度" class="headerlink" title="归并排序的时间复杂度"></a>归并排序的时间复杂度</h4><p>$$T(n) &#x3D; 2T(\frac{n}{2}) + O(n) &#x3D; Θ(nlogn)$$</p>
-<h4 id="二叉树遍历的时间复杂度"><a href="#二叉树遍历的时间复杂度" class="headerlink" title="二叉树遍历的时间复杂度"></a>二叉树遍历的时间复杂度</h4><p>$$T(n) &#x3D; 2T(\frac{n}{2}) + O(1) &#x3D; Θ(n)$$</p>
-<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><h4 id="常数时间"><a href="#常数时间" class="headerlink" title="常数时间"></a>常数时间</h4><p>若对于一个算法，$T(n)$与输入大小无关，则称其具有<strong>常数时间</strong>，记作$O(1)$时间。<br><img src="https://i-blog.csdnimg.cn/blog_migrate/81af67a38b8cfe0640e4ec161be919c9.png#pic_center" alt="常数时间"></p>
-<h4 id="线性时间"><a href="#线性时间" class="headerlink" title="线性时间"></a>线性时间</h4><p>如果一个算法的时间复杂度为$O(n)$，则称这个算法具有<strong>线性时间</strong>，或$O(n)$时间。<br><img src="https://i-blog.csdnimg.cn/blog_migrate/ce8c3e45b55816c526b47186d243a0c0.png#pic_center" alt="线性时间"></p>
-<h4 id="O-n-2-时间"><a href="#O-n-2-时间" class="headerlink" title="$O(n^2)$时间"></a>$O(n^2)$时间</h4><p><img src="https://i-blog.csdnimg.cn/blog_migrate/f706b43229c158572d99c249fe431aeb.png#pic_center" alt="O(n^2)时间"><br>以及$O(n^3)$时间，$O(n^4)$时间等</p>
-<h4 id="对数时间"><a href="#对数时间" class="headerlink" title="对数时间"></a>对数时间</h4><p>若算法的$T(n) &#x3D;O(logn)$，则称其具有<strong>对数时间</strong>。由于计算机使用二进制的记数系统，对数常常<strong>以2为底</strong>（即l$og_2n$，有时写作$lgn$）。<br><img src="https://i-blog.csdnimg.cn/blog_migrate/24f94c9acec12fa7e24a5d4ad0f19a0d.png#pic_center" alt="对数时间"><br>推导：<br>设$T(n) &#x3D; log_an$，由换底公式可得$log_an &#x3D; \frac{lnn}{lna}$,因为$lna$为常数项，省略，所以$log_an$与$lnn$为同一数量级函数，所以底数无意义，可省略。</p>
-<h4 id="线性对数时间"><a href="#线性对数时间" class="headerlink" title="线性对数时间"></a>线性对数时间</h4><p>若一个算法时间复杂度$T(n) &#x3D; O(nlog n)$，则称这个算法具有<strong>线性对数时间。</strong><img src="https://i-blog.csdnimg.cn/blog_migrate/80755fb6aa7c6c0e093825caa1721bea.png#pic_center" alt="线性对数时间"></p>
-<h4 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h4><p>一般来说，$O(n^2) &gt; O(n logn) &gt; O(n) &gt; O(logn) &gt; O(1)$<br><img src="https://i-blog.csdnimg.cn/blog_migrate/95740b982d1ddd928d2ccd146278c948.png#pic_center" alt="时间复杂度比较"></p>
-<h3 id="关于时间复杂度"><a href="#关于时间复杂度" class="headerlink" title="关于时间复杂度"></a>关于时间复杂度</h3><p>根据估计，电脑一秒钟大约能进行<strong>1亿次</strong>运算。据经验，当时间复杂度在<strong>2000w以下</strong>时，一般认为程序能在<strong>1s</strong>内跑完</p>
-<h2 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h2><p>一个算法所耗费的存储空间记为$S(n)$；</p>
-<p>若存在$f(n)$,使$n$	趋近于无穷大时，$\frac{S(n)}{f(n)}$为不等于零的常数，则称$f(n)$为$S(n)$的<strong>同数量级函数</strong>，记作</p>
-<p>$$S(n) &#x3D; O(f(n))$$</p>
-<p>称$O(f(n))$为算法$S(n)$的<strong>渐进空间复杂度</strong>，简称<strong>空间复杂度</strong>。</p>
-<h2 id="时空复杂度"><a href="#时空复杂度" class="headerlink" title="时空复杂度"></a>时空复杂度</h2><p>时间复杂度和空间复杂度往往是相互影响的。当追求一个较好的时间复杂度时，可能会使空间复杂度的性能变差，即可能导致占用较多的存储空间；反之，当追求一个较好的空间复杂度时，可能会使时间复杂度的性能变差，即可能导致占用较长的运行时间。</p>
-<p>算法的时间复杂度和空间复杂度合称为<strong>算法的复杂度</strong>。</p>
-<h1 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h1><h2 id="初级算法"><a href="#初级算法" class="headerlink" title="初级算法"></a>初级算法</h2><h2 id="进阶算法"><a href="#进阶算法" class="headerlink" title="进阶算法"></a>进阶算法</h2><ol>
-<li>2.0 线性优化策略</li>
-<li>2.1分治与倍增</li>
-</ol>
+<p>Sol：由于 $a_1$, $a_4$ 的范围是较为确定的，所以我们很自然的联想到枚举 $a_2$, $a_3$。</p>
+<p>首先预处理出所有点各自之间的距离，在求出对于点 $i$，满足 $\operatorname{dis}(i, j) \le k + 1, \operatorname{dis}(j, 1) \le k + 1$ 的 $j$ 的点权最大值，次大值，次次大值。</p>
+<p>最后我们暴力枚举 $a_2, a_3$，记录答案。</p>
+<p>为什么只需要求出前三大的值？是因为我们发现不满足的情况，即点重合的情况最多只会有 $a_2(j) &#x3D; a_3&#x2F;a_3(j) &#x3D; a_2$，$a_2(j) &#x3D; a_3(j)$两种。</p>
+<p>复杂度分析： </p>
+<p>$BFS$ &#x2F; $dijskra$ ： $O(nm) &#x2F; O(n\log n)$，求前三大值：$O(n^2)$，暴力枚举：$O(n^2)$，总时间复杂度：$O(nm + n^2)&#x2F;O(nlogn + n^2)$</p>
+<h1 id="B-game-策略游戏"><a href="#B-game-策略游戏" class="headerlink" title="B.game 策略游戏"></a>B.game 策略游戏</h1><p>题意：见原题题面。</p>
+<p>Sol：牺牲思考的代价是巨大的码量。</p>
+<p>显然此题与两个区间内最大值，最小值以及正数、负数和0相关。</p>
+<p>所以我们开两个线段树，无脑维护区间最大正数，最小正数，最大负数，最小负数，区间内有无正数，区间内有无负数，区间内有无 0。</p>
+<p>最后暴力分类讨论。</p>
+<p>这样我们就得到了一个常数巨大无比的 $O(q\log n)$ 算法。</p>
+<h1 id="C-galaxy-星战"><a href="#C-galaxy-星战" class="headerlink" title="C.galaxy 星战"></a>C.galaxy 星战</h1><p>题意：给定一个 $n$ 个点 $m$ 条边组成的有向图 <del>(怎么还是图论)</del>，有 4 种修改：</p>
+<ul>
+<li>删掉 $u \rightarrow v$ 之间的一条边，保证操作有效</li>
+<li>恢复 $u \rightarrow v$ 之间的一条边，保证操作有效</li>
+<li>删掉终点为 $u$ 的所有边，不保证操作有效</li>
+<li>恢复终点为 $u$ 的所有边，不保证操作有效</li>
+</ul>
+<p>查询每次操作后，每个点的出度是否都恰为 1.</p>
+<p>Sol：考虑维护每个点的出度。设可重集 $S$ 为所有边的起点构成的集合，那么符合要求的 $S$ 即为 $1\sim n$。我们对于每个点随机赋予一个相异权值，那么就可以将 $S$ 中元素的点权相加计为 $S$ 的 $\operatorname{hash}$ 值。</p>
+<p>维护当前的 $\operatorname{hash}$ 值 $H$。每次操作完将 $H$ 与 $S$ 进行比较。</p>
+<p>对于操作 1、2，直接对 $H$ 加减 $u$ 的点权即可。</p>
+<p>对于操作 3、4，我们预处理初始点 $i$ 入边对应的起点的集合的 $\operatorname{hash}$ 值 $U_i$，维护当前点 $i$ 入边对应的起点的集合的 $\operatorname{hash}$ 值 $C_i$，每次操作将 $H$ 加减 $(U_u - C_u) &#x2F; C_u$。</p>
+<p>每次操作完更新 $C$ 的值即可。</p>
+<p>复杂度 $O(n)$。</p>
+<h1 id="D-transmit-数据运输"><a href="#D-transmit-数据运输" class="headerlink" title="D.transmit 数据运输"></a>D.transmit 数据运输</h1><p>题意：给定一颗 $n$ 个节点构成的树，每个点有点权。给定 $k$，对于每次询问，给定 $u, v$，求出从 $u$ 每次跳最多 $k$ 步到达 $v$ 的最小点权和。</p>
+<p>Sol: 当 $k &#x3D; 1$ 时，显然答案即为 $u, v$ 简单路径上的点权和，倍增求解即可。</p>
+<p>当 $k &#x3D; 2$ 时，有以下三种走法：</p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/sl444api.png"></p>
+<p>而我们发现第三种走法是不用考虑的，因为走法 3 下一步必须到之前走法 1，2 的点，肯定不如直接走走法 1，2更优。</p>
+<p>所以 $k &#x3D; 2$ 可以将问题转化为 $u,v$ 之间简单路径上每次跳 1 或 2 步的最小点权和。</p>
+<p>$k &#x3D; 3$ 与之前最大的不同就是跳点的范围不再是简单路径上的点。根据 $k &#x3D; 2$ 的思路，我们可以推出这个范围是 $u,v$ 之间的简单路径，路径上挂着长度最大为 1 的一条 “毛毛虫”。如图：</p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/45feq5sk.png"></p>
+<p>这样我们将问题转化为在这样一个“毛毛虫”上每次跳最多 $k$ 步的最小点权和。</p>
+<p>很容易联想到<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2279">消防局的设立</a>的dp。类似地设计状态 $f_{i, 0&#x2F;1&#x2F;2}$ 表示到达与点 $i$ 距离为 $0&#x2F;1&#x2F;2$ 的答案。转移方程：</p>
+<p>$$<br>\begin{aligned}<br>f_{i,0} &amp;&#x3D;\min(f_{i-1,0}+val_i,f_{i-1,1}+val_i,f_{i-1,2}+val_i)\<br>f_{i,1} &amp;&#x3D;\min(f_{i-1,0},f_{i-1,1}+val_{mn_i})\<br>f_{i,2} &amp;&#x3D; f_{i-1,0}<br>\end{aligned}<br>$$</p>
+<p>其中 $mn_i$ 表示与 $i$ 相邻的点权最小值，这个可以预处理得到。$val_i$ 表示点权。</p>
+<p>这个转移方程对 $k &#x3D; 1$ 和 $k &#x3D; 2$ 时同样适用，将第二维缩小即可。需要注意的是当 $k &#x3D; 2$ 时需要将 $val_{mn_i}$ 设为 $+\infty$，因为我们无法从 $f_{i - 1, 1}$ 转移而来。</p>
+<p>这样我们可以过掉 $O(qn)$ 和特殊性质的点。考虑优化转移。</p>
+<p>我们通过观察(呃呃)可以发现这个转移可以通过矩阵加速。新定义矩阵乘法 $[AB]<em>{i,j}&#x3D;\min\limits_k{A</em>{i,k}+B_{k,j}}$。此矩阵乘法同样具有结合律：</p>
+<p>$$<br>\begin{aligned}<br>[A\cdot (B\cdot C)]<em>{i,j}&amp;&#x3D;\min\limits_k{A</em>{i,k}+[B\cdot C]<em>{k,j}}\<br>&amp;&#x3D;\min\limits_k\left{A</em>{i,k}+\min\limits_p{B_{k,p}+C_{p,j}}\right}\<br>&amp;&#x3D;\min\limits_k\left{\min\limits_p{A_{i,k}+B_{k,p}+C_{p,j}}\right}\<br>&amp;&#x3D;\min\limits_p\left{\min\limits_k{A_{i,k}+B_{k,p}+C_{p,j}}\right}\<br>&amp;&#x3D;\min\limits_p\left{\min\limits_k{A_{i,k}+B_{k,p}}+C_{p,j}\right}\<br>&amp;&#x3D;\min\limits_p{[A\cdot B]<em>{i,p}+C</em>{p,j}}\<br>&amp;&#x3D;[(A\cdot B)\cdot C]_{i,j}<br>\end{aligned}<br>$$</p>
+<p>我们将 dp 转移转化为矩阵乘法：</p>
+<h1 id="begin-bmatrix-f-i-1-0-f-i-1-1-f-i-1-2-end-bmatrix-cdot-begin-bmatrix-val-i-0-infty-val-i-val-mn-i-0-val-i-infty-infty-end-bmatrix"><a href="#begin-bmatrix-f-i-1-0-f-i-1-1-f-i-1-2-end-bmatrix-cdot-begin-bmatrix-val-i-0-infty-val-i-val-mn-i-0-val-i-infty-infty-end-bmatrix" class="headerlink" title="$$\begin{bmatrix}f_{i-1,0} &amp; f_{i-1,1} &amp; f_{i-1,2}\\end{bmatrix}\cdot\begin{bmatrix}val_i &amp; 0 &amp; +\infty\val_i &amp; val_{mn_i} &amp; 0\val_i &amp; +\infty &amp; +\infty\end{bmatrix}"></a>$$<br>\begin{bmatrix}<br>f_{i-1,0} &amp; f_{i-1,1} &amp; f_{i-1,2}\<br>\end{bmatrix}<br>\cdot<br>\begin{bmatrix}<br>val_i &amp; 0 &amp; +\infty\<br>val_i &amp; val_{mn_i} &amp; 0\<br>val_i &amp; +\infty &amp; +\infty<br>\end{bmatrix}</h1><p>\begin{bmatrix}<br>f_{i,0} &amp; f_{i,1} &amp; f_{i,2}\<br>\end{bmatrix}<br>$$</p>
+<p>由于矩阵乘法的性质，我们可以通过倍增转移方程。预处理 $up_{i, j}$ 为 $i$ 向上跳 $2^j$ 步的转移矩阵乘积，$down_{i, j}$ 为 $i$ 向上 $2^j$ 的祖先向下跳 $2^j$ 步的矩阵转移乘积。</p>
+<p>求出 $u,v$ 两点的 $lca$，设 $u$ 到 $lca$ 的初始矩阵为<br>$$<br>\begin{bmatrix}<br>val_u &amp; +\infty &amp; +\infty\<br>+\infty &amp; +\infty &amp; +\infty\<br>+\infty &amp; +\infty &amp; +\infty<br>\end{bmatrix}<br>$$</p>
+<p>设 $v$ 到 $lca$ 的初始矩阵为单位矩阵</p>
+<p>$$<br>\begin{bmatrix}<br>0 &amp; +\infty &amp; +\infty\<br>+\infty &amp; 0 &amp; +\infty\<br>+\infty &amp; +\infty &amp; 0<br>\end{bmatrix}<br>$$</p>
+<p>主对角线是 $0$ 而不是 $1$ 的原因是这个矩阵乘法是新定义的。</p>
+<p>我们倍增求出 $u$ 通过 $up$ 矩阵转移到 $lca$ 的答案，再求出 $v$ 通过 $down$ 矩阵转移到 $lca$ 的答案。两者相乘得到矩阵的 $(0,0)$ 即为答案。</p>
+<p>时间复杂度: $O(qk^3\log n + n\log n)$</p>
 
     </div>
 
@@ -419,13 +419,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">1k</span>
+    <span title="站点总字数">2k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">5 分钟</span>
+    <span title="站点阅读时长">6 分钟</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
