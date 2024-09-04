@@ -1514,7 +1514,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #49ffbf;
+    background: #ffd5c1;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2821,6 +2821,19 @@ ul.breadcrumb li:last-child {
   .tag-cloud-10 {
     border-bottom-color: #eee;
     color: #eee;
+  }
+}
+.gt-header a,
+.gt-comments a,
+.gt-popup a {
+  border-bottom: 0;
+}
+.gt-container .gt-popup .gt-action.is--active::before {
+  top: 0.7em;
+}
+@media (prefers-color-scheme: dark) {
+  .gt-container .gt-header-textarea {
+    background-color: var(--card-bg-color) !important;
   }
 }
 mjx-container[jax='CHTML'][display='true'],
