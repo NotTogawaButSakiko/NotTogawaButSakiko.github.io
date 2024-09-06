@@ -1,4 +1,4 @@
-http://example.com/2024/08/27/%E5%A4%8D%E6%9D%82%E5%BA%A6/
+http://example.com/%E7%AC%94%E8%AE%B0/%E5%A4%8D%E6%9D%82%E5%BA%A6/
 http://example.com/404/index.html
 http://example.com/categories/index.html
 http://example.com/schedule/index.html
