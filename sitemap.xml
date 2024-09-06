@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/%E7%AC%94%E8%AE%B0/%E5%A4%8D%E6%9D%82%E5%BA%A6/</loc>
+    <loc>http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/%E5%A4%8D%E6%9D%82%E5%BA%A6/</loc>
     
     <lastmod>2024-09-06</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/404/index.html</loc>
+    <loc>http://nottogawabutsakiko.github.io/404/index.html</loc>
     
     <lastmod>2024-09-03</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/index.html</loc>
+    <loc>http://nottogawabutsakiko.github.io/categories/index.html</loc>
     
     <lastmod>2024-08-30</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/schedule/index.html</loc>
+    <loc>http://nottogawabutsakiko.github.io/schedule/index.html</loc>
     
     <lastmod>2024-08-30</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/about/index.html</loc>
+    <loc>http://nottogawabutsakiko.github.io/about/index.html</loc>
     
     <lastmod>2024-08-30</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/index.html</loc>
+    <loc>http://nottogawabutsakiko.github.io/tags/index.html</loc>
     
     <lastmod>2024-08-30</lastmod>
     
@@ -57,7 +57,7 @@
   
 
   <url>
-    <loc>http://example.com/</loc>
+    <loc>http://nottogawabutsakiko.github.io/</loc>
     <lastmod>2024-09-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -65,7 +65,7 @@
 
   
   <url>
-    <loc>http://example.com/tags/%E7%AE%97%E6%B3%95/</loc>
+    <loc>http://nottogawabutsakiko.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2024-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -74,7 +74,7 @@
 
   
   <url>
-    <loc>http://example.com/categories/%E7%AC%94%E8%AE%B0/</loc>
+    <loc>http://nottogawabutsakiko.github.io/categories/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2024-09-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
