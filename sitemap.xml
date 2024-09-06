@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://nottogawabutsakiko.github.io/categories/index.html</loc>
+    
+    <lastmod>2024-09-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/%E5%A4%8D%E6%9D%82%E5%BA%A6/</loc>
     
     <lastmod>2024-09-06</lastmod>
@@ -14,15 +23,6 @@
     <loc>http://nottogawabutsakiko.github.io/404/index.html</loc>
     
     <lastmod>2024-09-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://nottogawabutsakiko.github.io/categories/index.html</loc>
-    
-    <lastmod>2024-08-30</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
