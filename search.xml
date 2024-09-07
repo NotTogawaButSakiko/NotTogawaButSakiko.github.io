@@ -13,16 +13,17 @@
 <li>取最大的项</li>
 <li>省略掉所有的<strong>常数系数</strong>、<strong>常数底数</strong>、<strong>常数项</strong></li>
 </ol>
-<h1 id="渐进符号"><a href="#渐进符号" class="headerlink" title="渐进符号"></a>渐进符号</h1><h2 id="Θ-记号（渐进紧确界）"><a href="#Θ-记号（渐进紧确界）" class="headerlink" title="$Θ$记号（渐进紧确界）"></a>$Θ$记号（渐进紧确界）</h2><p>对于函数 $f(n)$ 和 $g(n)$，$f(n)&#x3D;Θ(g(n))$，当且仅当 $\exist c_1,c_2,n_0&gt;0$，使得 $\forall n ≥ n_0,0≤ c_1·g(n) ≤ f(n) ≤ c_2 · g(n)$。</p>
+<h1 id="渐进符号"><a href="#渐进符号" class="headerlink" title="渐进符号"></a>渐进符号</h1><h2 id="Θ-记号（渐进紧确界）"><a href="#Θ-记号（渐进紧确界）" class="headerlink" title="$Θ$记号（渐进紧确界）"></a>$Θ$记号（渐进紧确界）</h2><p>对于函数 $f(n)$ 和 $g(n)$，$f(n)&#x3D;Θ(g(n))$，当且仅当 $\exists c_1, c_2,n_0&gt;0$，使得 $\forall n ≥ n_0,0≤ c_1·g(n) ≤ f(n) ≤ c_2 · g(n)$。</p>
 <p>也就是说，如果函数 $f(n)&#x3D;Θ(g(n))$，那么我们能找到两个正数 $c_1,c_2$ 使得 $f(n)$ 被 $c_1·g(n)$ 和 $c_2·g(n)$ 夹在中间。</p>
-<h2 id="O-记号（渐进紧确上界）"><a href="#O-记号（渐进紧确上界）" class="headerlink" title="$O$ 记号（渐进紧确上界）"></a>$O$ 记号（渐进紧确上界）</h2><p>对于函数 $f(n)$ 和 $g(n)$，$f(n)&#x3D;Θ(g(n))$，当且仅当 $\exist c,n_0&gt;0$，使得 $\forall n ≥ n_0,0 ≤ f(n) ≤ c · g(n)$。</p>
+<h2 id="O-记号（渐进紧确上界）"><a href="#O-记号（渐进紧确上界）" class="headerlink" title="$O$ 记号（渐进紧确上界）"></a>$O$ 记号（渐进紧确上界）</h2><p>对于函数 $f(n)$ 和 $g(n)$，$f(n)&#x3D;Θ(g(n))$，当且仅当 $\exists c,n_0&gt;0$，使得 $\forall n ≥ n_0,0 ≤ f(n) ≤ c · g(n)$。</p>
 <p>也就是说，如果函数 $f(n)&#x3D;Θ(g(n))$，那么我们能找到一个正数 $c$ 使得 $f(n)$ 在 $c·g(n)$  下面。</p>
-<h2 id="Ω-记号（渐进紧确下界）"><a href="#Ω-记号（渐进紧确下界）" class="headerlink" title="$Ω$记号（渐进紧确下界）"></a>$Ω$记号（渐进紧确下界）</h2><p>对于函数 $f(n)$ 和 $g(n)$，$f(n)&#x3D;Θ(g(n))$，当且仅当 $\exist c,n_0&gt;0$，使得 $\forall n ≥ n_0,0 ≤ c · g(n) ≤ f(n)$。</p>
+<h2 id="Ω-记号（渐进紧确下界）"><a href="#Ω-记号（渐进紧确下界）" class="headerlink" title="$Ω$记号（渐进紧确下界）"></a>$Ω$记号（渐进紧确下界）</h2><p>对于函数 $f(n)$ 和 $g(n)$，$f(n)&#x3D;Θ(g(n))$，当且仅当 $\exists c,n_0&gt;0$，使得 $\forall n ≥ n_0,0 ≤ c · g(n) ≤ f(n)$。</p>
 <p>也就是说，如果函数 $f(n)&#x3D;Θ(g(n))$，那么我们能找到一个正数 $c$ 使得 $f(n)$ 在 $c·g(n)$  上面。</p>
 <h1 id="主定理（M定理）"><a href="#主定理（M定理）" class="headerlink" title="主定理（M定理）"></a>主定理（M定理）</h1><p>主定理为用来计算递归时间复杂度的定理 $Master Theorem$</p>
 <p>假设我们用递归递推式$$T(n) &#x3D; aT(\frac{n}{b})+f(n)$$</p>
 <p>其中 $a$ 为递归子问题的数量，$\frac{n}{b}$ 为每个子问题的规模，$f(n)$ 为分解和合并的时间。</p>
-<p> 那么就会有三种情况：<br> <img data-src="https://i-blog.csdnimg.cn/blog_migrate/589694106496fb64cbee55c9eac7d15f.jpeg#pic_center" alt="选自《算法导论》"></p>
+<p> 那么就会有三种情况：</p>
+<p> <img data-src="/image.jpg"></p>
 <ul>
 <li>当 $f(n)$ 比 $n^{log_ba}$ 小时，$T(n) &#x3D; Θ(n^{log_ba})$</li>
 <li>当 $f(n)$ 趋近于 $n^{log_ba}$ 时，$T(n) &#x3D; Θ(n^{log_ba}logn)$</li>

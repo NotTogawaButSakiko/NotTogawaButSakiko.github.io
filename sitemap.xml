@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://nottogawabutsakiko.github.io/categories/index.html</loc>
+    <loc>http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/%E5%A4%8D%E6%9D%82%E5%BA%A6/</loc>
     
-    <lastmod>2024-09-06</lastmod>
+    <lastmod>2024-09-07</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/%E5%A4%8D%E6%9D%82%E5%BA%A6/</loc>
+    <loc>http://nottogawabutsakiko.github.io/categories/index.html</loc>
     
     <lastmod>2024-09-06</lastmod>
     
@@ -58,7 +58,7 @@
 
   <url>
     <loc>http://nottogawabutsakiko.github.io/</loc>
-    <lastmod>2024-09-06</lastmod>
+    <lastmod>2024-09-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -66,7 +66,7 @@
   
   <url>
     <loc>http://nottogawabutsakiko.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2024-09-06</lastmod>
+    <lastmod>2024-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -75,7 +75,7 @@
   
   <url>
     <loc>http://nottogawabutsakiko.github.io/categories/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2024-09-06</lastmod>
+    <lastmod>2024-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
