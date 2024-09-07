@@ -9,14 +9,14 @@
     <atom:link href="http://nottogawabutsakiko.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>弱い私はもう死にました。</description>
-    <pubDate>Sat, 07 Sep 2024 03:44:30 GMT</pubDate>
+    <pubDate>Sat, 07 Sep 2024 03:50:50 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
       <title>时间复杂度</title>
-      <link>http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/%E5%A4%8D%E6%9D%82%E5%BA%A6/</link>
-      <guid>http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/%E5%A4%8D%E6%9D%82%E5%BA%A6/</guid>
-      <pubDate>Tue, 27 Aug 2024 08:19:02 GMT</pubDate>
+      <link>http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/complicity/</link>
+      <guid>http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/complicity/</guid>
+      <pubDate>Sat, 07 Sep 2024 03:50:20 GMT</pubDate>
       
       <description>&lt;p&gt;一个算法中的语句 &lt;strong&gt;执行次数&lt;/strong&gt; 称为语句频度或时间频度，记为 $T(n)$；&lt;/p&gt;
 &lt;p&gt;若存在 $f(n)$ ,使 $&#92;lim &#92;limits_{n -&amp;gt; &#92;infty} &#92;frac{T(n)}{f(n)}$ 为不等于零的常数，则称 $f(n)$ 为 $T(n)$ 的 &lt;strong&gt;同数量级(阶)函数&lt;/strong&gt;，记作&lt;/p&gt;
@@ -34,7 +34,7 @@
       <category domain="http://nottogawabutsakiko.github.io/tags/%E7%AE%97%E6%B3%95/">算法</category>
       
       
-      <comments>http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/%E5%A4%8D%E6%9D%82%E5%BA%A6/#disqus_thread</comments>
+      <comments>http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/complicity/#disqus_thread</comments>
       
     </item>
     

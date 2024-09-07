@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>时间复杂度</title>
-    <url>/%E7%AC%94%E8%AE%B0/%E5%A4%8D%E6%9D%82%E5%BA%A6/</url>
+    <url>/%E7%AC%94%E8%AE%B0/complicity/</url>
     <content><![CDATA[<p>一个算法中的语句 <strong>执行次数</strong> 称为语句频度或时间频度，记为 $T(n)$；</p>
 <p>若存在 $f(n)$ ,使 $\lim \limits_{n -&gt; \infty} \frac{T(n)}{f(n)}$ 为不等于零的常数，则称 $f(n)$ 为 $T(n)$ 的 <strong>同数量级(阶)函数</strong>，记作</p>
 <p>$$T(n) &#x3D; O(f(n))$$</p>
