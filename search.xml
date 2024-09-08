@@ -31,8 +31,8 @@
 <h1 id="主定理-M定理"><a href="#主定理-M定理" class="headerlink" title="主定理 (M定理)"></a>主定理 (M定理)</h1><p>主定理为用来计算递归时间复杂度的定理 $Master Theorem$</p>
 <p>假设我们用递归递推式$$T(n) &#x3D; aT(\frac{n}{b})+f(n)$$</p>
 <p>其中 $a$ 为递归子问题的数量,$\frac{n}{b}$ 为每个子问题的规模,$f(n)$ 为分解和合并的时间.</p>
-<p> 那么就会有三种情况:S</p>
-<p><img data-src="/Mtherom.jpg" alt="M 定理"></p>
+<p> 那么就会有三种情况:</p>
+<p> <img data-src="/Mtherom.jpg" alt="M 定理"></p>
 <ul>
 <li>当 $f(n)$ 比 $n^{log_ba}$ 小时,$T(n) &#x3D; Θ(n^{log_ba})$</li>
 <li>当 $f(n)$ 趋近于 $n^{log_ba}$ 时,$T(n) &#x3D; Θ(n^{log_ba}logn)$</li>
