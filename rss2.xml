@@ -9,8 +9,23 @@
     <atom:link href="http://nottogawabutsakiko.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>弱い私はもう死にました。</description>
-    <pubDate>Sun, 08 Sep 2024 09:20:43 GMT</pubDate>
+    <pubDate>Sun, 08 Sep 2024 09:52:43 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title></title>
+      <link>http://nottogawabutsakiko.github.io/uncategorized/calculation%20therom%20base/</link>
+      <guid>http://nottogawabutsakiko.github.io/uncategorized/calculation%20therom%20base/</guid>
+      <pubDate>Sun, 08 Sep 2024 09:52:43 GMT</pubDate>
+      
+      
+      
+      
+      
+      
+      <comments>http://nottogawabutsakiko.github.io/uncategorized/calculation%20therom%20base/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>时间复杂度</title>

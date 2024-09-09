@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>/uncategorized/calculation%20therom%20base/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>时间复杂度</title>
     <url>/%E7%AC%94%E8%AE%B0/complicity/</url>
     <content><![CDATA[<p>一个算法中的语句最坏情况下执行次数称为 <strong>语句频度</strong> 或 <strong>时间频度</strong> 记为 $T(n)$.</p>
