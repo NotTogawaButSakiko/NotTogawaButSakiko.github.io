@@ -2,36 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://nottogawabutsakiko.github.io/uncategorized/calculation%20therom%20base/</loc>
+    <loc>http://nottogawabutsakiko.github.io/tags/index.html</loc>
     
-    <lastmod>2024-09-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/complicity/</loc>
-    
-    <lastmod>2024-09-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://nottogawabutsakiko.github.io/categories/index.html</loc>
-    
-    <lastmod>2024-09-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://nottogawabutsakiko.github.io/404/index.html</loc>
-    
-    <lastmod>2024-09-03</lastmod>
+    <lastmod>2024-09-09</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -40,7 +13,7 @@
   <url>
     <loc>http://nottogawabutsakiko.github.io/schedule/index.html</loc>
     
-    <lastmod>2024-08-30</lastmod>
+    <lastmod>2024-09-09</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -49,16 +22,43 @@
   <url>
     <loc>http://nottogawabutsakiko.github.io/about/index.html</loc>
     
-    <lastmod>2024-08-30</lastmod>
+    <lastmod>2024-09-09</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://nottogawabutsakiko.github.io/tags/index.html</loc>
+    <loc>http://nottogawabutsakiko.github.io/categories/index.html</loc>
     
-    <lastmod>2024-08-30</lastmod>
+    <lastmod>2024-09-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://nottogawabutsakiko.github.io/uncategorized/calculation%20therom%20base/</loc>
+    
+    <lastmod>2024-09-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/complicity/</loc>
+    
+    <lastmod>2024-09-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://nottogawabutsakiko.github.io/404/index.html</loc>
+    
+    <lastmod>2024-09-09</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
