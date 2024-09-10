@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>/uncategorized/calculation%20therom%20base/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>时间复杂度</title>
-    <url>/%E7%AC%94%E8%AE%B0/complicity/</url>
+    <url>/%E7%AC%94%E8%AE%B0/complexity/</url>
     <content><![CDATA[<p>一个算法中的语句最坏情况下执行次数称为 <strong>语句频度</strong> 或 <strong>时间频度</strong> 记为 $T(n)$.</p>
 <p>然而, 当输入规模足够大, 我们便不用确定算法的精确运行次数, 只需要考虑算法的增长量级即可, 因此我们要研究算法的 <strong>渐进</strong> 效率.</p>
 <p>若存在 $f(n)$ ,使 $\lim \limits_{n -&gt; \infty} \frac{T(n)}{f(n)}$ 为不等于零的常数, 则称 $f(n)$ 为 $T(n)$ 的 <strong>同数量级(阶)函数</strong> ,记作:</p>
@@ -111,5 +106,10 @@
       <tags>
         <tag>算法</tag>
       </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/uncategorized/calculation%20therom%20base/</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
