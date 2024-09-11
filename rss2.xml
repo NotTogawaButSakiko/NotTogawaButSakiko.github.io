@@ -9,8 +9,35 @@
     <atom:link href="http://nottogawabutsakiko.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>弱い私はもう死にました。</description>
-    <pubDate>Tue, 10 Sep 2024 23:55:50 GMT</pubDate>
+    <pubDate>Wed, 11 Sep 2024 15:02:47 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>复杂度</title>
+      <link>http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/calculation%20therom%20base/</link>
+      <guid>http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/calculation%20therom%20base/</guid>
+      <pubDate>Mon, 09 Sep 2024 14:47:38 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;在之前的博文中, 我们研究了时间复杂度, 这可以有效的帮助我们大体评析和优化算法。然而，不管我们多么尽力的优化算法，有些问题是极其 “难” 的，使得我们不能在很短的时间内解决。&lt;/p&gt;
+&lt;p&gt;本文讲述的 $NP$ 类问题正是用来帮助我们评析一个 &lt;strong&gt;问题&lt;/st</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p>在之前的博文中, 我们研究了时间复杂度, 这可以有效的帮助我们大体评析和优化算法。然而，不管我们多么尽力的优化算法，有些问题是极其 “难” 的，使得我们不能在很短的时间内解决。</p><p>本文讲述的 $NP$ 类问题正是用来帮助我们评析一个 <strong>问题</strong> 的复杂程度。注意的是本文并不形式化，即不引入语言体系。以及本文一切证明也非形式化。</p><h1 id="判定问题与最优化问题"><a href="#判定问题与最优化问题" class="headerlink" title="判定问题与最优化问题"></a>判定问题与最优化问题</h1><p><strong>判定问题</strong> (decision problem) 指的是答案只有 “是” 或 “否” 的问题</p><p><strong>最优化问题</strong> (optimization problem) 其中每一个解有一个关联的值, 我们希望找出一个具有最佳值的可行解。如最短路问题就是一个最优化问题</p><p>在后面的 $NP-C$ 类问题中所描述的其实都是判定问题, 但是最优化问题是可以转化为多个判定问题。而判定问题相对于最优化问题来说，”难度” 一定是小于等于后者的。所以我们对于判定问题的讨论是可以帮助我们评价一个最优化问题的复杂度的。</p><h1 id="规约"><a href="#规约" class="headerlink" title="规约"></a>规约</h1><p>事实上，我们很难证明一个问题他到底 “难不难” , 因为人们到目前为止都没有证明出 $P$ 是否等于 $NP$ (后文会阐述)。</p><p>但是，问题的相对难度比较却是很容易的。我们可以通过一个已知难度的问题，通过比较来确定新问题的难度。这种比较就是 <strong>规约</strong> (reduction)</p><p>我们已知一个判定问题 $B$ , 和一个已知难度的判定问题 $A$ . 我们称一个问题的输入为 <strong>实例</strong> (instance) 。问题 $A$ 的实例为 $\alpha$ , 问题 $B$ 的实例为 $\beta$ , 如果任何实例 $\alpha$ 都可以转化成满足以下条件的实例 $\beta$ :</p><ul><li>转换操作在多项式时间之内</li><li>两个实例的解是相同的. 即若 $\alpha$ 的解是 “是”，则 $\beta$ 的解也应当是 “是”</li></ul><p>则我们称 $A$ 可以规约到 $B$ ,即 $B$ 的难度至少和 $A$ “一样难”。</p><p>例如一元一次方程可以规约到二元一次方程，则二元一次方程的难度大于等于前者。</p><h1 id="NP-类问题-nondeterministic-polynomial-time"><a href="#NP-类问题-nondeterministic-polynomial-time" class="headerlink" title="$NP$ 类问题 (nondeterministic polynomial time)"></a>$NP$ 类问题 (nondeterministic polynomial time)</h1><h2 id="P-类问题"><a href="#P-类问题" class="headerlink" title="$P$ 类问题"></a>$P$ 类问题</h2><p>$P$ 类问题指的是可以在多项式时间内找到解的问题。这类问题是最简单的问题，我们绝大部分解决的问题都是 $P$ 类问题。</p><h2 id="NP-类问题"><a href="#NP-类问题" class="headerlink" title="$NP$ 类问题"></a>$NP$ 类问题</h2><p>$NP$ 类问题指的是可以在多项式时间内验证一个答案的正确性。正如填数独是一个很困难的问题，然而去验证一个填好的数独是否正确却很简单。</p><p>显然，所有 $P$ 问题都是 $NP$ 类问题，那么，是否 $NP$ 问题也一定是 $P$ 问题呢？</p><p>我不知道。事实上，目前世界上还没有人知道。这个被誉为千禧年七大数学未解之谜之一的难题已经困扰了人们半个世纪，即 $P ?&#x3D; NP$</p><p>于是数学家想出了一个方法，我们把所有 $NP$ 类问题都规约到某一些问题，即某一些问题的难度不低于任何 $NP$ 类问题. 只要我们证明了这一些问题中的一个问题是 $P$ 类问题，我们就能证明所有 $NP$ 类问题都是 $P$ 类问题, 即 $P &#x3D; NP$.</p><p>这一些问题即为 $NP-Complete$ 问题, 也叫 $NP-C$ 问题。</p><h2 id="NP-C-类问题"><a href="#NP-C-类问题" class="headerlink" title="$NP-C$ 类问题"></a>$NP-C$ 类问题</h2><p>由上文可以看出，$NP-C$ 问题是最难的一类问题。如果一个问题是 $NP$ 类问题，且所有 $NP$ 类问题都可以规约到这个问题，则这个问题即为 $NP-C$ 类问题。</p><p>许多著名的问题都是 $NP-C$ 类问题，例如蛋白质的折叠和金融加密等等。遗憾的是，目前还没有一个 $NP-C$ 类问题得到解决。只要证明 $P &#x3D; NP$ , 人类文明将会得到突破性的飞跃。世界不再有癌症，一切密码都是无效的，任何人都可以成为莫扎特和高斯。。。</p><h3 id="第一个-NP-C-问题"><a href="#第一个-NP-C-问题" class="headerlink" title="第一个 $NP-C$ 问题"></a>第一个 $NP-C$ 问题</h3><p>我们知道，要证明一个 $NP-C$ 问题，首先要证明一个已知的 $NP-C$ 能规约到这个问题上。因此，我们必须已知一个 $NP-C$ 问题。这个问题即 <strong>电路可满足性问题</strong></p><p><strong>电路可满足性问题</strong> : 给定一个由 $AND$ , $OR$ 和 $NOT$ 组成的 <strong>布尔组合电路</strong> ，它是 <strong>可满足</strong> 电路 吗？</p><p><strong>布尔组合电路</strong> : 由一个或多个 <strong>布尔组合元素</strong> (<strong>逻辑门</strong>) 通过线路连接而成。需要注意布尔组合电路不包含回路。</p><p><strong>可满足</strong> : 如果一个单输出布尔组合电路具有一个可满足性赋值 (即使得电路的输出为 $1$ 的一个真值赋值), 就称该布尔组合电路是可满足的。</p><p>证明略。</p><h3 id="证明-NP-C-问题"><a href="#证明-NP-C-问题" class="headerlink" title="证明 $NP-C$ 问题"></a>证明 $NP-C$ 问题</h3><p>证明一个题无解或者证明一个题不能在多项式时间内完成都是极其困难的，然而证明 $NP-C$ 问题却相对简单:</p><ol><li>证明该问题为 $NP$ 问题</li><li>证明一个已知的 $NP-C$ 问题可以归约到该问题上</li></ol><h3 id="史上第一个被证明的-NP-C-问题"><a href="#史上第一个被证明的-NP-C-问题" class="headerlink" title="史上第一个被证明的 $NP-C$ 问题"></a>史上第一个被证明的 $NP-C$ 问题</h3><p>$SAT$ (布尔公式可满足性) 是史上第一个被证明的 $NP-C$ 问题。</p><ol><li>证明 $SAT$ 问题是 $NP$ 问题</li></ol><p>易得 $SAT$ 的一个解的证书可以在线性时间能得到验证。所以 $SAT$ 为 $NP$ 问题</p><ol start="2"><li>证明电路可满足性问题可以规约到 $SAT$ 问题</li></ol><p>易得电路可满足性问题是只有与、或、非的布尔公式。所以电路可满足性问题可以规约到 $SAT$ 问题</p><p>综上, $SAT$ 问题是 $NP-C$ 问题</p><h3 id="k-CNF-问题"><a href="#k-CNF-问题" class="headerlink" title="$k-CNF$ 问题"></a>$k-CNF$ 问题</h3><p>若布尔公式是由 $AND$ 连接若干 $OR$ 字句，且每个子句中恰有 $k$ 个布尔变量或其否定形式，问其是否可满足。</p><p>例如 $(x_1 \lor x_2) \land (\urcorner x_1 \lor x_3) \land (\urcorner x_2 \lor x_3)$ 就是一个 $2-CNF$ 问题</p><p>可以确定 $2-CNF$ 是一个 $P$ 类问题, 但是 $3-CNF$ 可以被证明为 $NP-C$ 问题</p><p>证明略</p><h3 id="哈密顿回路和旅行商问题"><a href="#哈密顿回路和旅行商问题" class="headerlink" title="哈密顿回路和旅行商问题"></a>哈密顿回路和旅行商问题</h3><p>无向图 $G(V,E)$ 中的一条 <strong>哈密顿回路</strong> 是通过 $V$ 中的每个顶点的简单回路。具有这种回路的图被称为 <strong>哈密顿图</strong> .</p><p>可以知道验证一个图是否为哈密顿图需要 $O(n!)$ 的时间复杂度, 且在 $O(n^2)$ 时间内验证验证一个回路是否为哈密顿回路。所以显然哈密顿回路问题是一个 $NP$ 问题。</p><p>而 $NP-C$ 顶点覆盖问题可以规约到哈密顿回路问题上，所以哈密顿回路问题是一个 $NP-C$ 问题。</p><p><img data-src="/../images/Hamiltonian_path.png" alt="哈密顿回路"></p><p>在旅行商问题中，一个售货员必须访问一个完全图中所有顶点且回到最初顶点，花费的费用是边权之和，求最小费用。</p><p>易知旅行商问题也是一个哈密顿回路，所以哈密顿回路可以规约到旅行商问题上。而旅行商问题显然是 $NP$ 问题，所以旅行商问题也是 $NP-C$ 问题。</p><h2 id="NP-H-问题"><a href="#NP-H-问题" class="headerlink" title="$NP-H$ 问题"></a>$NP-H$ 问题</h2><p>所有 $NP$ 问题都可以规约到该类问题，且该类问题不是 $NP$ 问题，即无法在多项式时间内验证一个解的证书的正确性。</p><p>该类问题为最难的一类问题。</p><p><img data-src="/../images/P_np_np-complete_np-hard.png" alt="P ?= NP"></p>]]></content:encoded>
+      
+      
+      <category domain="http://nottogawabutsakiko.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</category>
+      
+      
+      <category domain="http://nottogawabutsakiko.github.io/tags/%E7%AE%97%E6%B3%95/">算法</category>
+      
+      
+      <comments>http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/calculation%20therom%20base/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>时间复杂度</title>
@@ -40,21 +67,6 @@
       
       
       <comments>http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/complexity/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://nottogawabutsakiko.github.io/uncategorized/calculation%20therom%20base/</link>
-      <guid>http://nottogawabutsakiko.github.io/uncategorized/calculation%20therom%20base/</guid>
-      <pubDate>Mon, 09 Sep 2024 14:47:38 GMT</pubDate>
-      
-      
-      
-      
-      
-      
-      <comments>http://nottogawabutsakiko.github.io/uncategorized/calculation%20therom%20base/#disqus_thread</comments>
       
     </item>
     

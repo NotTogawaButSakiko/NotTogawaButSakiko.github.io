@@ -23,27 +23,31 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"nottogawabutsakiko.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.20.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="弱い私はもう死にました。">
+    <meta name="description" content="在之前的博文中, 我们研究了时间复杂度, 这可以有效的帮助我们大体评析和优化算法。然而，不管我们多么尽力的优化算法，有些问题是极其 “难” 的，使得我们不能在很短的时间内解决。 本文讲述的 $NP$ 类问题正是用来帮助我们评析一个 问题 的复杂程度。注意的是本文并不形式化，即不引入语言体系。以及本文一切证明也非形式化。 判定问题与最优化问题判定问题 (decision problem) 指的是答案">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="Sakiko&#39;s Blog">
-<meta property="og:url" content="http://nottogawabutsakiko.github.io/uncategorized/calculation%20therom%20base/index.html">
+<meta property="og:title" content="复杂度">
+<meta property="og:url" content="http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/calculation%20therom%20base/index.html">
 <meta property="og:site_name" content="Sakiko&#39;s Blog">
-<meta property="og:description" content="弱い私はもう死にました。">
+<meta property="og:description" content="在之前的博文中, 我们研究了时间复杂度, 这可以有效的帮助我们大体评析和优化算法。然而，不管我们多么尽力的优化算法，有些问题是极其 “难” 的，使得我们不能在很短的时间内解决。 本文讲述的 $NP$ 类问题正是用来帮助我们评析一个 问题 的复杂程度。注意的是本文并不形式化，即不引入语言体系。以及本文一切证明也非形式化。 判定问题与最优化问题判定问题 (decision problem) 指的是答案">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://nottogawabutsakiko.github.io/images/Hamiltonian_path.png">
+<meta property="og:image" content="http://nottogawabutsakiko.github.io/images/P_np_np-complete_np-hard.png">
 <meta property="article:published_time" content="2024-09-09T14:47:38.860Z">
-<meta property="article:modified_time" content="2024-09-09T14:47:38.860Z">
+<meta property="article:modified_time" content="2024-09-11T15:02:47.920Z">
 <meta property="article:author" content="不是丰川是祥子">
+<meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://nottogawabutsakiko.github.io/images/Hamiltonian_path.png">
 
 
-<link rel="canonical" href="http://nottogawabutsakiko.github.io/uncategorized/calculation%20therom%20base/">
+<link rel="canonical" href="http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/calculation%20therom%20base/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://nottogawabutsakiko.github.io/uncategorized/calculation%20therom%20base/","path":"uncategorized/calculation therom base/","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/calculation%20therom%20base/","path":"笔记/calculation therom base/","title":"复杂度"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title> | Sakiko's Blog</title>
+<title>复杂度 | Sakiko's Blog</title>
   
 
 
@@ -131,7 +135,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -144,6 +148,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%A4%E5%AE%9A%E9%97%AE%E9%A2%98%E4%B8%8E%E6%9C%80%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">判定问题与最优化问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A7%84%E7%BA%A6"><span class="nav-number">2.</span> <span class="nav-text">规约</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#NP-%E7%B1%BB%E9%97%AE%E9%A2%98-nondeterministic-polynomial-time"><span class="nav-number">3.</span> <span class="nav-text">$NP$ 类问题 (nondeterministic polynomial time)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#P-%E7%B1%BB%E9%97%AE%E9%A2%98"><span class="nav-number">3.1.</span> <span class="nav-text">$P$ 类问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NP-%E7%B1%BB%E9%97%AE%E9%A2%98"><span class="nav-number">3.2.</span> <span class="nav-text">$NP$ 类问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NP-C-%E7%B1%BB%E9%97%AE%E9%A2%98"><span class="nav-number">3.3.</span> <span class="nav-text">$NP-C$ 类问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA-NP-C-%E9%97%AE%E9%A2%98"><span class="nav-number">3.3.1.</span> <span class="nav-text">第一个 $NP-C$ 问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%81%E6%98%8E-NP-C-%E9%97%AE%E9%A2%98"><span class="nav-number">3.3.2.</span> <span class="nav-text">证明 $NP-C$ 问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%B2%E4%B8%8A%E7%AC%AC%E4%B8%80%E4%B8%AA%E8%A2%AB%E8%AF%81%E6%98%8E%E7%9A%84-NP-C-%E9%97%AE%E9%A2%98"><span class="nav-number">3.3.3.</span> <span class="nav-text">史上第一个被证明的 $NP-C$ 问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#k-CNF-%E9%97%AE%E9%A2%98"><span class="nav-number">3.3.4.</span> <span class="nav-text">$k-CNF$ 问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%93%88%E5%AF%86%E9%A1%BF%E5%9B%9E%E8%B7%AF%E5%92%8C%E6%97%85%E8%A1%8C%E5%95%86%E9%97%AE%E9%A2%98"><span class="nav-number">3.3.5.</span> <span class="nav-text">哈密顿回路和旅行商问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NP-H-%E9%97%AE%E9%A2%98"><span class="nav-number">3.4.</span> <span class="nav-text">$NP-H$ 问题</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -239,7 +244,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://nottogawabutsakiko.github.io/uncategorized/calculation%20therom%20base/">
+    <link itemprop="mainEntityOfPage" href="http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/calculation%20therom%20base/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -252,12 +257,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Sakiko's Blog">
+      <meta itemprop="name" content="复杂度 | Sakiko's Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          
+          复杂度
         </h1>
 
         <div class="post-meta-container">
@@ -270,6 +275,22 @@
 
       <time title="创建时间：2024-09-09 22:47:38" itemprop="dateCreated datePublished" datetime="2024-09-09T22:47:38+08:00">2024-09-09</time>
     </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-09-11 23:02:47" itemprop="dateModified" datetime="2024-09-11T23:02:47+08:00">2024-09-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
+        </span>
+    </span>
 
   
     <span class="post-meta-break"></span>
@@ -278,14 +299,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>0</span>
+      <span>1.9k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>7 分钟</span>
     </span>
 </div>
 
@@ -295,7 +316,62 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body" itemprop="articleBody"><p>在之前的博文中, 我们研究了时间复杂度, 这可以有效的帮助我们大体评析和优化算法。然而，不管我们多么尽力的优化算法，有些问题是极其 “难” 的，使得我们不能在很短的时间内解决。</p>
+<p>本文讲述的 $NP$ 类问题正是用来帮助我们评析一个 <strong>问题</strong> 的复杂程度。注意的是本文并不形式化，即不引入语言体系。以及本文一切证明也非形式化。</p>
+<h1 id="判定问题与最优化问题"><a href="#判定问题与最优化问题" class="headerlink" title="判定问题与最优化问题"></a>判定问题与最优化问题</h1><p><strong>判定问题</strong> (decision problem) 指的是答案只有 “是” 或 “否” 的问题</p>
+<p><strong>最优化问题</strong> (optimization problem) 其中每一个解有一个关联的值, 我们希望找出一个具有最佳值的可行解。如最短路问题就是一个最优化问题</p>
+<p>在后面的 $NP-C$ 类问题中所描述的其实都是判定问题, 但是最优化问题是可以转化为多个判定问题。而判定问题相对于最优化问题来说，”难度” 一定是小于等于后者的。所以我们对于判定问题的讨论是可以帮助我们评价一个最优化问题的复杂度的。</p>
+<h1 id="规约"><a href="#规约" class="headerlink" title="规约"></a>规约</h1><p>事实上，我们很难证明一个问题他到底 “难不难” , 因为人们到目前为止都没有证明出 $P$ 是否等于 $NP$ (后文会阐述)。</p>
+<p>但是，问题的相对难度比较却是很容易的。我们可以通过一个已知难度的问题，通过比较来确定新问题的难度。这种比较就是 <strong>规约</strong> (reduction)</p>
+<p>我们已知一个判定问题 $B$ , 和一个已知难度的判定问题 $A$ . 我们称一个问题的输入为 <strong>实例</strong> (instance) 。问题 $A$ 的实例为 $\alpha$ , 问题 $B$ 的实例为 $\beta$ , 如果任何实例 $\alpha$ 都可以转化成满足以下条件的实例 $\beta$ :</p>
+<ul>
+<li>转换操作在多项式时间之内</li>
+<li>两个实例的解是相同的. 即若 $\alpha$ 的解是 “是”，则 $\beta$ 的解也应当是 “是”</li>
+</ul>
+<p>则我们称 $A$ 可以规约到 $B$ ,即 $B$ 的难度至少和 $A$ “一样难”。</p>
+<p>例如一元一次方程可以规约到二元一次方程，则二元一次方程的难度大于等于前者。</p>
+<h1 id="NP-类问题-nondeterministic-polynomial-time"><a href="#NP-类问题-nondeterministic-polynomial-time" class="headerlink" title="$NP$ 类问题 (nondeterministic polynomial time)"></a>$NP$ 类问题 (nondeterministic polynomial time)</h1><h2 id="P-类问题"><a href="#P-类问题" class="headerlink" title="$P$ 类问题"></a>$P$ 类问题</h2><p>$P$ 类问题指的是可以在多项式时间内找到解的问题。这类问题是最简单的问题，我们绝大部分解决的问题都是 $P$ 类问题。</p>
+<h2 id="NP-类问题"><a href="#NP-类问题" class="headerlink" title="$NP$ 类问题"></a>$NP$ 类问题</h2><p>$NP$ 类问题指的是可以在多项式时间内验证一个答案的正确性。正如填数独是一个很困难的问题，然而去验证一个填好的数独是否正确却很简单。</p>
+<p>显然，所有 $P$ 问题都是 $NP$ 类问题，那么，是否 $NP$ 问题也一定是 $P$ 问题呢？</p>
+<p>我不知道。事实上，目前世界上还没有人知道。这个被誉为千禧年七大数学未解之谜之一的难题已经困扰了人们半个世纪，即 $P ?&#x3D; NP$</p>
+<p>于是数学家想出了一个方法，我们把所有 $NP$ 类问题都规约到某一些问题，即某一些问题的难度不低于任何 $NP$ 类问题. 只要我们证明了这一些问题中的一个问题是 $P$ 类问题，我们就能证明所有 $NP$ 类问题都是 $P$ 类问题, 即 $P &#x3D; NP$.</p>
+<p>这一些问题即为 $NP-Complete$ 问题, 也叫 $NP-C$ 问题。</p>
+<h2 id="NP-C-类问题"><a href="#NP-C-类问题" class="headerlink" title="$NP-C$ 类问题"></a>$NP-C$ 类问题</h2><p>由上文可以看出，$NP-C$ 问题是最难的一类问题。如果一个问题是 $NP$ 类问题，且所有 $NP$ 类问题都可以规约到这个问题，则这个问题即为 $NP-C$ 类问题。</p>
+<p>许多著名的问题都是 $NP-C$ 类问题，例如蛋白质的折叠和金融加密等等。遗憾的是，目前还没有一个 $NP-C$ 类问题得到解决。只要证明 $P &#x3D; NP$ , 人类文明将会得到突破性的飞跃。世界不再有癌症，一切密码都是无效的，任何人都可以成为莫扎特和高斯。。。</p>
+<h3 id="第一个-NP-C-问题"><a href="#第一个-NP-C-问题" class="headerlink" title="第一个 $NP-C$ 问题"></a>第一个 $NP-C$ 问题</h3><p>我们知道，要证明一个 $NP-C$ 问题，首先要证明一个已知的 $NP-C$ 能规约到这个问题上。因此，我们必须已知一个 $NP-C$ 问题。这个问题即 <strong>电路可满足性问题</strong></p>
+<p><strong>电路可满足性问题</strong> : 给定一个由 $AND$ , $OR$ 和 $NOT$ 组成的 <strong>布尔组合电路</strong> ，它是 <strong>可满足</strong> 电路 吗？</p>
+<p><strong>布尔组合电路</strong> : 由一个或多个 <strong>布尔组合元素</strong> (<strong>逻辑门</strong>) 通过线路连接而成。需要注意布尔组合电路不包含回路。</p>
+<p><strong>可满足</strong> : 如果一个单输出布尔组合电路具有一个可满足性赋值 (即使得电路的输出为 $1$ 的一个真值赋值), 就称该布尔组合电路是可满足的。</p>
+<p>证明略。</p>
+<h3 id="证明-NP-C-问题"><a href="#证明-NP-C-问题" class="headerlink" title="证明 $NP-C$ 问题"></a>证明 $NP-C$ 问题</h3><p>证明一个题无解或者证明一个题不能在多项式时间内完成都是极其困难的，然而证明 $NP-C$ 问题却相对简单:</p>
+<ol>
+<li>证明该问题为 $NP$ 问题</li>
+<li>证明一个已知的 $NP-C$ 问题可以归约到该问题上</li>
+</ol>
+<h3 id="史上第一个被证明的-NP-C-问题"><a href="#史上第一个被证明的-NP-C-问题" class="headerlink" title="史上第一个被证明的 $NP-C$ 问题"></a>史上第一个被证明的 $NP-C$ 问题</h3><p>$SAT$ (布尔公式可满足性) 是史上第一个被证明的 $NP-C$ 问题。</p>
+<ol>
+<li>证明 $SAT$ 问题是 $NP$ 问题</li>
+</ol>
+<p>易得 $SAT$ 的一个解的证书可以在线性时间能得到验证。所以 $SAT$ 为 $NP$ 问题</p>
+<ol start="2">
+<li>证明电路可满足性问题可以规约到 $SAT$ 问题</li>
+</ol>
+<p>易得电路可满足性问题是只有与、或、非的布尔公式。所以电路可满足性问题可以规约到 $SAT$ 问题</p>
+<p>综上, $SAT$ 问题是 $NP-C$ 问题</p>
+<h3 id="k-CNF-问题"><a href="#k-CNF-问题" class="headerlink" title="$k-CNF$ 问题"></a>$k-CNF$ 问题</h3><p>若布尔公式是由 $AND$ 连接若干 $OR$ 字句，且每个子句中恰有 $k$ 个布尔变量或其否定形式，问其是否可满足。</p>
+<p>例如 $(x_1 \lor x_2) \land (\urcorner x_1 \lor x_3) \land (\urcorner x_2 \lor x_3)$ 就是一个 $2-CNF$ 问题</p>
+<p>可以确定 $2-CNF$ 是一个 $P$ 类问题, 但是 $3-CNF$ 可以被证明为 $NP-C$ 问题</p>
+<p>证明略</p>
+<h3 id="哈密顿回路和旅行商问题"><a href="#哈密顿回路和旅行商问题" class="headerlink" title="哈密顿回路和旅行商问题"></a>哈密顿回路和旅行商问题</h3><p>无向图 $G(V,E)$ 中的一条 <strong>哈密顿回路</strong> 是通过 $V$ 中的每个顶点的简单回路。具有这种回路的图被称为 <strong>哈密顿图</strong> .</p>
+<p>可以知道验证一个图是否为哈密顿图需要 $O(n!)$ 的时间复杂度, 且在 $O(n^2)$ 时间内验证验证一个回路是否为哈密顿回路。所以显然哈密顿回路问题是一个 $NP$ 问题。</p>
+<p>而 $NP-C$ 顶点覆盖问题可以规约到哈密顿回路问题上，所以哈密顿回路问题是一个 $NP-C$ 问题。</p>
+<p><img data-src="/../images/Hamiltonian_path.png" alt="哈密顿回路"></p>
+<p>在旅行商问题中，一个售货员必须访问一个完全图中所有顶点且回到最初顶点，花费的费用是边权之和，求最小费用。</p>
+<p>易知旅行商问题也是一个哈密顿回路，所以哈密顿回路可以规约到旅行商问题上。而旅行商问题显然是 $NP$ 问题，所以旅行商问题也是 $NP-C$ 问题。</p>
+<h2 id="NP-H-问题"><a href="#NP-H-问题" class="headerlink" title="$NP-H$ 问题"></a>$NP-H$ 问题</h2><p>所有 $NP$ 问题都可以规约到该类问题，且该类问题不是 $NP$ 问题，即无法在多项式时间内验证一个解的证书的正确性。</p>
+<p>该类问题为最难的一类问题。</p>
+<p><img data-src="/../images/P_np_np-complete_np-hard.png" alt="P ?= NP"></p>
+
     </div>
 
     
@@ -312,7 +388,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://nottogawabutsakiko.github.io/uncategorized/calculation%20therom%20base/" title="">http://nottogawabutsakiko.github.io/uncategorized/calculation therom base/</a>
+      <a href="http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/calculation%20therom%20base/" title="复杂度">http://nottogawabutsakiko.github.io/笔记/calculation therom base/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -337,6 +413,9 @@
   </div>
 </div>
 
+          <div class="post-tags">
+              <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"># 算法</a>
+          </div>
 
         
   <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
@@ -347,11 +426,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
+                <a href="/%E7%AC%94%E8%AE%B0/complexity/" rel="prev" title="时间复杂度">
+                  <i class="fa fa-angle-left"></i> 时间复杂度
+                </a>
             </div>
             <div class="post-nav-item">
-                <a href="/%E7%AC%94%E8%AE%B0/complexity/" rel="next" title="时间复杂度">
-                  时间复杂度 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -385,13 +464,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">2k</span>
+    <span title="站点总字数">4k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">8 分钟</span>
+    <span title="站点阅读时长">15 分钟</span>
   </span>
 </div>
 
@@ -455,11 +534,11 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"http://nottogawabutsakiko.github.io/uncategorized/calculation%20therom%20base/"}</script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/calculation%20therom%20base/"}</script>
   <script src="/js/third-party/quicklink.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"NotTogawaButSakiko","repo":"blog_comments","client_id":"Ov23liixMNmKo9EDRPJx","client_secret":"892b9d84c6579f8b3b77ee4e11771d80b9ab708a","admin_user":"NotTogawaButSakiko","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"78bed53ca78744e3079d920f5ee00e97"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"NotTogawaButSakiko","repo":"blog_comments","client_id":"Ov23liixMNmKo9EDRPJx","client_secret":"892b9d84c6579f8b3b77ee4e11771d80b9ab708a","admin_user":"NotTogawaButSakiko","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"8f035beb649a9481bb61e5dfe050dbb9"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
