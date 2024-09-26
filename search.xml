@@ -1,6 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>前缀和与差分</title>
+    <url>/%E7%AC%94%E8%AE%B0/basic%20linear%20otimize%20algorithms/</url>
+    <content><![CDATA[<h1 id="前缀和"><a href="#前缀和" class="headerlink" title="前缀和"></a>前缀和</h1><p>给定一个数组，我们需要进行多次查询区间和，如何每次查询在 $O(1)$ 时间内呢？</p>
+<p>我们将 $sum_i$ 设为前 $i$ 个数的和，每次查询区间 $l, r$ ，我们只需找到 $sum_r - sum_{l - 1}$ 即可。</p>
+<p>我们将该算法称为前缀和。</p>
+<!---more--->
+
+<h2 id="前缀和的推广"><a href="#前缀和的推广" class="headerlink" title="前缀和的推广"></a>前缀和的推广</h2><p>我们现在不查询区间和，而是查询区间积，如何操作呢？</p>
+<p>我们不难想到只需维护 $mul_i$ 表示前 $i$ 个数的积，每次查询区间 $l,r$ ,我们只需找到 $mul_r &#x2F; mul_{l - 1}$ .</p>
+<p>然而现在我们需要对一个数组的数据进行多次查询区间最大值，还能如此操作吗？</p>
+<p>我们发现前缀和方法失效了，因为我们无法找到最大值操作的 <strong>逆操作</strong> ，即使我们维护了前 $i$ 个数的最大值，我们也无法抵消前 $l-1$ 个数的影响。</p>
+<p>我们还发现，除法、或操作也是无法进行前缀和，但是异或操作确可以。</p>
+<p>进一步说，当运算在数据中符合 <strong>封闭性、结合律</strong> ，存在 <strong>单位元、逆元</strong> ，才能使用前缀和。</p>
+<p>也就是说对于数组 $A$ ，$A$ 关于该运算构成 <strong>群</strong> ，则该运算可使用前缀和。</p>
+<h2 id="二维前缀和"><a href="#二维前缀和" class="headerlink" title="二维前缀和"></a>二维前缀和</h2><p>我们将上述的数组扩展到二维，多次进行二维区间查询和，满足 $O(1)$ 查询。</p>
+<p>考虑容斥原理，设 $sum_{i,j}$ 是前 $i$ 行 $j$ 列的和, 对于二位区间 $(l_i, l_j), (r_i, r_j)$ , 只需查询 $sum_{r_i,r_j} - sum_{l_i-1,r_j} - sum_{r_i, l_j-1} + sum_{l_i-1,l_j-1}$ </p>
+<h2 id="高维前缀和-SOSDP"><a href="#高维前缀和-SOSDP" class="headerlink" title="高维前缀和(SOSDP)"></a>高维前缀和(SOSDP)</h2><p>我们计算 $k$ 维的前缀和，若依然用容斥的算法去做，那么复杂度是 $O(2^kn^k)$ , 是我们难以接受的。</p>
+<p>考虑如何不使用容斥来降低复杂度。</p>
+<p>回到二维前缀和, 我们将算法变为如下伪代码:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">for i from 1 to n</span><br><span class="line">    for j from 1 to n</span><br><span class="line">        a[i][j] += a[i][j - 1]</span><br><span class="line"></span><br><span class="line">for i from 1 to n</span><br><span class="line">    for j from 1 to n</span><br><span class="line">        a[i][j] += a[i - 1][j]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>其中 $a_{i,j}$ 为原数组。</p>
+<p>我们发现这样行和列是互不干扰的。复杂度为 $O(kn^k)$ , 在维度大于 $2$ 的时候复杂度优于容斥算法。</p>
+<p>推广到 $n$ 维，我们将其状态压缩成 $state$, 枚举每 $i$ 维，对于原数组 $a_{state}$ , 从 $a_{state_{i-1}}$ 转移过来。</p>
+<p>例题：<span class="exturl" data-url="aHR0cHM6Ly9hdGNvZGVyLmpwL2NvbnRlc3RzL2FyYzEwMC90YXNrcy9hcmMxMDBfYw==">OR PLUS MAX<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="树上前缀和"><a href="#树上前缀和" class="headerlink" title="树上前缀和"></a>树上前缀和</h2><p>记 $sum_i$ 为 $i$ 节点到根节点的权值总和。</p>
+<ul>
+<li><p>若为点权总和，则 $s, t$ 路径上权值总和为 $sum_s + sum_t - sum_{lca} - sum_{fa_{lca}}$</p>
+</li>
+<li><p>若为边权总和，则 $s, t$ 路径上权值总和为 $sum_s + sum_t - 2sum_{lca}$</p>
+</li>
+</ul>
+<h1 id="差分"><a href="#差分" class="headerlink" title="差分"></a>差分</h1><p>给定一个数组，我们需要进行多次修改区间，如何每次修改在 $O(1)$ 时间内呢？</p>
+<p>我们将 $cha_i$ 设为第 $i$ 个数与第 $i-1$ 个数的差，每次修改区间 $l, r$ ，我们只需修改 $cha_l, cha_{r+1}$ 即可。每次询问第 $i$ 个数求差分数组前 $i$ 个数的和即可。</p>
+<p>我们将该算法称为差分。我们发现这种算法的修改与前缀和的查询类似，查询与前缀和的维护类似。不难发现差分即是前缀和的 <strong>逆操作</strong></p>
+<h2 id="树上差分"><a href="#树上差分" class="headerlink" title="树上差分"></a>树上差分</h2><h3 id="点差分"><a href="#点差分" class="headerlink" title="点差分"></a>点差分</h3><p>记 $cha_i$ 为 $i$ 节点与其父节点的差值。</p>
+<ul>
+<li><p>若为点权差分，则 $s, t$ 修改路径上权值为</p>
+<p>  $$cha_s \leftarrow cha_s + k$$<br>  $$cha_t \leftarrow cha_t + k$$<br>  $$cha_{lca} \leftarrow cha_{lca} - k$$<br>  $$cha_{fa_{lca}} \leftarrow cha_{fa_{lca}} - k$$</p>
+</li>
+<li><p>若为边权差分，我们将边下放到临近深度更大的点上存储。</p>
+<p>  $$cha_s \leftarrow cha_s + k$$<br>  $$cha_t \leftarrow cha_t + k$$<br>  $$cha_{lca} \leftarrow cha_{lca} - 2k$$</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>复杂度</title>
     <url>/%E7%AC%94%E8%AE%B0/calculation%20therom%20base/</url>
     <content><![CDATA[<p>在之前的博文中, 我们研究了时间复杂度, 这可以有效的帮助我们大体评析和优化算法。然而，不管我们多么尽力的优化算法，有些问题是极其 “难” 的，使得我们不能在很短的时间内解决。</p>
@@ -167,57 +220,6 @@
 <p>则总摊还复杂度为 $O(n)$</p>
 <hr>
 <p>我们发现,以上三种摊还分析方法的本质其实是一样的,即 <strong>摊还</strong> 思想. 这种思想尤为重要,在以后的算法学习中,我们可以经常发现这种思想的身影.</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前缀和与差分</title>
-    <url>/%E7%AC%94%E8%AE%B0/basic%20linear%20otimize%20algorithms/</url>
-    <content><![CDATA[<h1 id="前缀和"><a href="#前缀和" class="headerlink" title="前缀和"></a>前缀和</h1><p>给定一个数组，我们需要进行多次查询区间和，如何每次查询在 $O(1)$ 时间内呢？</p>
-<p>我们将 $sum_i$ 设为前 $i$ 个数的和，每次查询区间 $l, r$ ，我们只需找到 $sum_r - sum_{l - 1}$ 即可。</p>
-<p>我们将该算法称为前缀和。</p>
-<h2 id="前缀和的推广"><a href="#前缀和的推广" class="headerlink" title="前缀和的推广"></a>前缀和的推广</h2><p>我们现在不查询区间和，而是查询区间积，如何操作呢？</p>
-<p>我们不难想到只需维护 $mul_i$ 表示前 $i$ 个数的积，每次查询区间 $l,r$ ,我们只需找到 $mul_r &#x2F; mul_{l - 1}$ .</p>
-<p>然而现在我们需要对一个数组的数据进行多次查询区间最大值，还能如此操作吗？</p>
-<p>我们发现前缀和方法失效了，因为我们无法找到最大值操作的 <strong>逆操作</strong> ，即使我们维护了前 $i$ 个数的最大值，我们也无法抵消前 $l-1$ 个数的影响。</p>
-<p>我们还发现，除法、或操作也是无法进行前缀和，但是异或操作确可以。</p>
-<p>进一步说，当运算在数据中符合 <strong>封闭性、结合律</strong> ，存在 <strong>单位元、逆元</strong> ，才能使用前缀和。</p>
-<p>也就是说对于数组 $A$ ，$A$ 关于该运算构成 <strong>群</strong> ，则该运算可使用前缀和。</p>
-<h2 id="二维前缀和"><a href="#二维前缀和" class="headerlink" title="二维前缀和"></a>二维前缀和</h2><p>我们将上述的数组扩展到二维，多次进行二维区间查询和，满足 $O(1)$ 查询。</p>
-<p>考虑容斥原理，设 $sum_{i,j}$ 是前 $i$ 行 $j$ 列的和, 对于二位区间 $(l_i, l_j), (r_i, r_j)$ , 只需查询 $sum_{r_i,r_j} - sum_{l_i-1,r_j} - sum_{r_i, l_j-1} + sum_{l_i-1,l_j-1}$ </p>
-<h2 id="高维前缀和-SOSDP"><a href="#高维前缀和-SOSDP" class="headerlink" title="高维前缀和(SOSDP)"></a>高维前缀和(SOSDP)</h2><p>我们计算 $k$ 维的前缀和，若依然用容斥的算法去做，那么复杂度是 $O(2^kn^k)$ , 是我们难以接受的。</p>
-<p>考虑如何不使用容斥来降低复杂度。</p>
-<p>回到二维前缀和, 我们将算法变为如下伪代码:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">for i from 1 to n</span><br><span class="line">    for j from 1 to n</span><br><span class="line">        a[i][j] += a[i][j - 1]</span><br><span class="line"></span><br><span class="line">for i from 1 to n</span><br><span class="line">    for j from 1 to n</span><br><span class="line">        a[i][j] += a[i - 1][j]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>其中 $a_{i,j}$ 为原数组。</p>
-<p>我们发现这样行和列是互不干扰的。复杂度为 $O(kn^k)$ , 在维度大于 $2$ 的时候复杂度优于容斥算法。</p>
-<p>推广到 $n$ 维，我们将其状态压缩成 $state$, 枚举每 $i$ 维，对于原数组 $a_{state}$ , 从 $a_{state_{i-1}}$ 转移过来。</p>
-<p>例题：<span class="exturl" data-url="aHR0cHM6Ly9hdGNvZGVyLmpwL2NvbnRlc3RzL2FyYzEwMC90YXNrcy9hcmMxMDBfYw==">OR PLUS MAX<i class="fa fa-external-link-alt"></i></span></p>
-<h2 id="树上前缀和"><a href="#树上前缀和" class="headerlink" title="树上前缀和"></a>树上前缀和</h2><p>记 $sum_i$ 为 $i$ 节点到根节点的权值总和。</p>
-<ul>
-<li><p>若为点权总和，则 $s, t$ 路径上权值总和为 $sum_s + sum_t - sum_{lca} - sum_{fa_{lca}}$</p>
-</li>
-<li><p>若为边权总和，则 $s, t$ 路径上权值总和为 $sum_s + sum_t - 2sum_{lca}$</p>
-</li>
-</ul>
-<h1 id="差分"><a href="#差分" class="headerlink" title="差分"></a>差分</h1><p>给定一个数组，我们需要进行多次修改区间，如何每次修改在 $O(1)$ 时间内呢？</p>
-<p>我们将 $cha_i$ 设为第 $i$ 个数与第 $i-1$ 个数的差，每次修改区间 $l, r$ ，我们只需修改 $cha_l, cha_{r+1}$ 即可。每次询问第 $i$ 个数求差分数组前 $i$ 个数的和即可。</p>
-<p>我们将该算法称为差分。我们发现这种算法的修改与前缀和的查询类似，查询与前缀和的维护类似。不难发现差分即是前缀和的 <strong>逆操作</strong></p>
-<h2 id="树上差分"><a href="#树上差分" class="headerlink" title="树上差分"></a>树上差分</h2><h3 id="点差分"><a href="#点差分" class="headerlink" title="点差分"></a>点差分</h3><p>记 $cha_i$ 为 $i$ 节点与其父节点的差值。</p>
-<ul>
-<li><p>若为点权差分，则 $s, t$ 修改路径上权值为</p>
-<p>  $$cha_s \leftarrow cha_s + k$$<br>  $$cha_t \leftarrow cha_t + k$$<br>  $$cha_{lca} \leftarrow cha_{lca} - k$$<br>  $$cha_{fa_{lca}} \leftarrow cha_{fa_{lca}} - k$$</p>
-</li>
-<li><p>若为边权差分，我们将边下放到临近深度更大的点上存储。</p>
-<p>  $$cha_s \leftarrow cha_s + k$$<br>  $$cha_t \leftarrow cha_t + k$$<br>  $$cha_{lca} \leftarrow cha_{lca} - 2k$$</p>
-</li>
-</ul>
 ]]></content>
       <categories>
         <category>笔记</category>
