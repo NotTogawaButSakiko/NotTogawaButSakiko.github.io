@@ -231,4 +231,28 @@
         <tag>算法</tag>
       </tags>
   </entry>
+  <entry>
+    <title>离散化</title>
+    <url>/%E7%AC%94%E8%AE%B0/lisanhua/</url>
+    <content><![CDATA[<p>首先提出一个问题：</p>
+<blockquote>
+<p>给定 $n$ 个坐标 $x_i$ ，表示这个坐标上有一个标记，现在给出 $m$ 询问，区间内有多少标记。 $n \le 10^5, x_i \le 10^5, m \le 10^5$</p>
+</blockquote>
+<p>问题很简单，我们只需在坐标的维度上开桶，维护前缀和即可。</p>
+<p>但是如果 $x_i$ 的范围变到 $10^8$ 呢？甚至 $10^{18}$ ?</p>
+<p>若内存限制为 $128MB$ 的话，$int$ 数组大概只能开到 $3×10^7$，我们是无法在规定空间内完成的。</p>
+<span id="more"></span>
+
+<p>我们观察发现，坐标的个数和询问是较小的，我们若在坐标维度上开桶，有很多无效的点浪费了空间。</p>
+<p>于是我们需要离散化算法，将坐标集合映射到一个数值更小的域，从而避免超出内存</p>
+<p>事实上，当我们处理的坐标为类似浮点数，甚至字符时我们都可以使用离散化，本质上是通过哈希维护一个桶。</p>
+<p>伪代码实现：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">for i from 1 to n</span><br><span class="line">    tmp[++top] = a[i];</span><br><span class="line">for i from 1 to m</span><br><span class="line">    tmp[++top] = q[i];</span><br><span class="line">len = unique(tmp + 1, tmp + n + 1) - tmp - 1;</span><br><span class="line">for i from 1 to n</span><br><span class="line">    a[i] = lower_bound(tmp + 1, tmp + len + 1, a[i]) - tmp;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>算法 | 降维</tag>
+      </tags>
+  </entry>
 </search>

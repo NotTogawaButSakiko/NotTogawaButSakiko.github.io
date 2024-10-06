@@ -23,25 +23,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"nottogawabutsakiko.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.20.0","exturl":true,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="弱い私はもう死にました。">
+    <meta name="description" content="首先提出一个问题：  给定 $n$ 个坐标 $x_i$ ，表示这个坐标上有一个标记，现在给出 $m$ 询问，区间内有多少标记。 $n \le 10^5, x_i \le 10^5, m \le 10^5$  问题很简单，我们只需在坐标的维度上开桶，维护前缀和即可。 但是如果 $x_i$ 的范围变到 $10^8$ 呢？甚至 $10^{18}$ ? 若内存限制为 $128MB$ 的话，$int$ 数组">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="Sakiko&#39;s Blog">
-<meta property="og:url" content="http://nottogawabutsakiko.github.io/archives/2024/09/index.html">
+<meta property="og:title" content="离散化">
+<meta property="og:url" content="http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/lisanhua/index.html">
 <meta property="og:site_name" content="Sakiko&#39;s Blog">
-<meta property="og:description" content="弱い私はもう死にました。">
+<meta property="og:description" content="首先提出一个问题：  给定 $n$ 个坐标 $x_i$ ，表示这个坐标上有一个标记，现在给出 $m$ 询问，区间内有多少标记。 $n \le 10^5, x_i \le 10^5, m \le 10^5$  问题很简单，我们只需在坐标的维度上开桶，维护前缀和即可。 但是如果 $x_i$ 的范围变到 $10^8$ 呢？甚至 $10^{18}$ ? 若内存限制为 $128MB$ 的话，$int$ 数组">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-10-05T17:00:43.044Z">
+<meta property="article:modified_time" content="2024-10-06T06:00:08.789Z">
 <meta property="article:author" content="不是丰川是祥子">
+<meta property="article:tag" content="算法 | 降维">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://nottogawabutsakiko.github.io/archives/2024/09/">
+<link rel="canonical" href="http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/lisanhua/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"archives/2024/09/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/lisanhua/","path":"笔记/lisanhua/","title":"离散化"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>归档 | Sakiko's Blog</title>
+<title>离散化 | Sakiko's Blog</title>
   
 
 
@@ -75,7 +78,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Sakiko's Blog</h1>
+      <p class="site-title">Sakiko's Blog</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">也许有朝一日，我将升的更高。</p>
@@ -226,90 +229,168 @@
 
     </div>
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 4 篇日志。 继续努力。</span>
-      </div>
 
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/lisanhua/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="不是丰川是祥子">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sakiko's Blog">
+      <meta itemprop="description" content="弱い私はもう死にました。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="离散化 | Sakiko's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          离散化
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2024<span class="collection-year-count">4</span></span>
+
+      <time title="创建时间：2024-10-06 01:00:43 / 修改时间：14:00:08" itemprop="dateCreated datePublished" datetime="2024-10-06T01:00:43+08:00">2024-10-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>304</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>首先提出一个问题：</p>
+<blockquote>
+<p>给定 $n$ 个坐标 $x_i$ ，表示这个坐标上有一个标记，现在给出 $m$ 询问，区间内有多少标记。 $n \le 10^5, x_i \le 10^5, m \le 10^5$</p>
+</blockquote>
+<p>问题很简单，我们只需在坐标的维度上开桶，维护前缀和即可。</p>
+<p>但是如果 $x_i$ 的范围变到 $10^8$ 呢？甚至 $10^{18}$ ?</p>
+<p>若内存限制为 $128MB$ 的话，$int$ 数组大概只能开到 $3×10^7$，我们是无法在规定空间内完成的。</p>
+<span id="more"></span>
+
+<p>我们观察发现，坐标的个数和询问是较小的，我们若在坐标维度上开桶，有很多无效的点浪费了空间。</p>
+<p>于是我们需要离散化算法，将坐标集合映射到一个数值更小的域，从而避免超出内存</p>
+<p>事实上，当我们处理的坐标为类似浮点数，甚至字符时我们都可以使用离散化，本质上是通过哈希维护一个桶。</p>
+<p>伪代码实现：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">for i from 1 to n</span><br><span class="line">    tmp[++top] = a[i];</span><br><span class="line">for i from 1 to m</span><br><span class="line">    tmp[++top] = q[i];</span><br><span class="line">len = unique(tmp + 1, tmp + n + 1) - tmp - 1;</span><br><span class="line">for i from 1 to n</span><br><span class="line">    a[i] = lower_bound(tmp + 1, tmp + len + 1, a[i]) - tmp;</span><br></pre></td></tr></table></figure>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-09-29T16:21:39+08:00"
-              content="2024-09-29">
-          09-29
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/%E7%AC%94%E8%AE%B0/calculation%20therom%20base/" itemprop="url">
-            <span itemprop="name">复杂度</span>
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>不是丰川是祥子
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/lisanhua/" title="离散化">http://nottogawabutsakiko.github.io/笔记/lisanhua/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
           </a>
       </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-09-27T12:38:16+08:00"
-              content="2024-09-27">
-          09-27
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/%E7%AC%94%E8%AE%B0/basic%20linear%20otimize%20algorithms/" itemprop="url">
-            <span itemprop="name">前缀和与差分</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-09-09T22:47:38+08:00"
-              content="2024-09-09">
-          09-09
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/%E7%AC%94%E8%AE%B0/complexity/" itemprop="url">
-            <span itemprop="name">时间复杂度</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-
-    </div>
   </div>
-  
-  
-  
+</div>
 
+          <div class="post-tags">
+              <a href="/tags/%E7%AE%97%E6%B3%95-%E9%99%8D%E7%BB%B4/" rel="tag"># 算法 | 降维</a>
+          </div>
+
+        
+  <div class="social-like a2a_kit a2a_kit_size_32 a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a>
+      <a class="a2a_button_facebook"></a>
+      <a class="a2a_button_twitter"></a>
+  </div>
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/%E7%AC%94%E8%AE%B0/calculation%20therom%20base/" rel="prev" title="复杂度">
+                  <i class="fa fa-angle-left"></i> 复杂度
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
 </div>
   </main>
 
@@ -401,11 +482,11 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/quicklink/2.3.0/quicklink.umd.js" integrity="sha256-yvJQOINiH9fWemHn0vCA5lsHWJaHs6/ZmO+1Ft04SvM=" crossorigin="anonymous"></script>
-  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"http://nottogawabutsakiko.github.io/archives/2024/09/"}</script>
+  <script class="next-config" data-name="quicklink" type="application/json">{"enable":true,"home":true,"archive":true,"delay":true,"timeout":3000,"priority":true,"url":"http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/lisanhua/"}</script>
   <script src="/js/third-party/quicklink.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"NotTogawaButSakiko","repo":"blog_comments","client_id":"Ov23liixMNmKo9EDRPJx","client_secret":"892b9d84c6579f8b3b77ee4e11771d80b9ab708a","admin_user":"NotTogawaButSakiko","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"72cf4e755654ae768fceb668c919afb0"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"NotTogawaButSakiko","repo":"blog_comments","client_id":"Ov23liixMNmKo9EDRPJx","client_secret":"892b9d84c6579f8b3b77ee4e11771d80b9ab708a","admin_user":"NotTogawaButSakiko","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"8736f7efe1e3fd268d7ab29ab0b2c4f4"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
