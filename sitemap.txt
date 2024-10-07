@@ -11,7 +11,7 @@ http://nottogawabutsakiko.github.io/about/index.html
 http://nottogawabutsakiko.github.io/categories/index.html
 http://nottogawabutsakiko.github.io/404/index.html
 http://nottogawabutsakiko.github.io/
-http://nottogawabutsakiko.github.io/tags/%E7%AE%97%E6%B3%95-%E9%99%8D%E7%BB%B4/
 http://nottogawabutsakiko.github.io/tags/%E7%AE%97%E6%B3%95/
+http://nottogawabutsakiko.github.io/tags/%E7%AE%97%E6%B3%95-%E9%99%8D%E7%BB%B4/
 http://nottogawabutsakiko.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/
 http://nottogawabutsakiko.github.io/categories/%E7%AC%94%E8%AE%B0/
