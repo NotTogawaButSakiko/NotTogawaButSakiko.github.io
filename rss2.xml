@@ -9,8 +9,39 @@
     <atom:link href="http://nottogawabutsakiko.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>弱い私はもう死にました。</description>
-    <pubDate>Sun, 06 Oct 2024 06:00:08 GMT</pubDate>
+    <pubDate>Mon, 07 Oct 2024 06:48:18 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>双指针（尺取法）</title>
+      <link>http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/two%20pointers/</link>
+      <guid>http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/two%20pointers/</guid>
+      <pubDate>Sun, 06 Oct 2024 12:00:12 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;当你遇到类似以下几个问题时：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;序列按一定规则排序后，可利用序列有序性操作。这类题目一般也可使用二分。&lt;/li&gt;
+&lt;li&gt;维护符合规则的区间信息，且增减元素方便&lt;/li&gt;
+&lt;li&gt;符合贪心，一般是求类似较小值最大或较大值最小的问题&lt;/li&gt;
+&lt;/ul</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p>当你遇到类似以下几个问题时：</p><ul><li>序列按一定规则排序后，可利用序列有序性操作。这类题目一般也可使用二分。</li><li>维护符合规则的区间信息，且增减元素方便</li><li>符合贪心，一般是求类似较小值最大或较大值最小的问题</li></ul><p>那么这种一般是 <strong>双指针</strong> 问题。</p><p>双指针，顾名思义，同时维护两个指针在数据上遍历，从而将二维问题降维线性解决。</p>]]></content:encoded>
+      
+      
+      <category domain="http://nottogawabutsakiko.github.io/categories/%E7%AC%94%E8%AE%B0/">笔记</category>
+      
+      
+      <category domain="http://nottogawabutsakiko.github.io/tags/%E7%AE%97%E6%B3%95-%E9%99%8D%E7%BB%B4/">算法 | 降维</category>
+      
+      
+      <comments>http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/two%20pointers/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>离散化</title>
