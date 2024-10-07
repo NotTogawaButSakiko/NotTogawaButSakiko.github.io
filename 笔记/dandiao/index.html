@@ -30,11 +30,13 @@
 <meta property="og:site_name" content="Sakiko&#39;s Blog">
 <meta property="og:description" content="单调栈单调栈顾名思义，就是符合单调性的栈。 将一个元素插入单调栈时，为了维护栈的单调性，需要在保证将该元素插入到栈顶后整个栈满足单调性的前提下弹出最少的元素。 例如 $ {  1, 4, 6, 7 } $, 此时我们插入元素 $5$, 则需弹出栈顶的 $6,7$, 结果为 ${  1, 4, 5 }$ 伪代码实现： 1234insert xwhile !sta.empty() &amp;&amp;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-10-07T07:00:39.952Z">
-<meta property="article:modified_time" content="2024-10-07T11:14:57.050Z">
+<meta property="og:image" content="http://nottogawabutsakiko.github.io/images/Table_monotony.svg">
+<meta property="article:published_time" content="2024-10-07T11:56:29.846Z">
+<meta property="article:modified_time" content="2024-10-07T11:58:17.450Z">
 <meta property="article:author" content="不是丰川是祥子">
 <meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://nottogawabutsakiko.github.io/images/Table_monotony.svg">
 
 
 <link rel="canonical" href="http://nottogawabutsakiko.github.io/%E7%AC%94%E8%AE%B0/dandiao/">
@@ -271,7 +273,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2024-10-07 15:00:39 / 修改时间：19:14:57" itemprop="dateCreated datePublished" datetime="2024-10-07T15:00:39+08:00">2024-10-07</time>
+      <time title="创建时间：2024-10-07 19:56:29 / 修改时间：19:58:17" itemprop="dateCreated datePublished" datetime="2024-10-07T19:56:29+08:00">2024-10-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -290,14 +292,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>732</span>
+      <span>620</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -324,7 +326,8 @@
 <h2 id="滑动窗口"><a href="#滑动窗口" class="headerlink" title="滑动窗口"></a>滑动窗口</h2><p><span class="exturl" data-url="aHR0cHM6Ly93d3cubHVvZ3UuY29tLmNuL3Byb2JsZW0vUDE4ODY=">模板<i class="fa fa-external-link-alt"></i></span></p>
 <p>有一个长为 $n$ 的序列 $a$，以及一个大小为 $k$ 的窗口。现在这个从左边开始向右滑动，每次滑动一个单位，求出每次滑动后窗口中的最大值和最小值。</p>
 <p>例如，对于序列 $[1,3,-1,-3,5,3,6,7]$ 以及 $k &#x3D; 3$，有如下过程：</p>
-<p>$$<br>\def\arraystretch{1.2}<br>\begin{array}{c|c|c}<br>\textsf{窗口位置} &amp; \textsf{最小值} &amp; \textsf{最大值} \<br>\verb![1   3  -1] -3   5   3   6   7 ! &amp; -1 &amp; 3 \<br>\text{—} &amp; \text{—} &amp; \text{—} \  % 模拟分隔线<br>\verb! 1  [3  -1  -3]  5   3   6   7 ! &amp; -3 &amp; 3 \<br>\text{—} &amp; \text{—} &amp; \text{—} \  % 模拟分隔线<br>\verb! 1   3 [-1  -3   5]  3   6   7 ! &amp; -3 &amp; 5 \<br>\text{—} &amp; \text{—} &amp; \text{—} \  % 模拟分隔线<br>\verb! 1   3  -1 [-3   5   3]  6   7 ! &amp; -3 &amp; 5 \<br>\text{—} &amp; \text{—} &amp; \text{—} \  % 模拟分隔线<br>\verb! 1   3  -1  -3  [5   3   6]  7 ! &amp; 3 &amp; 6 \<br>\text{—} &amp; \text{—} &amp; \text{—} \  % 模拟分隔线<br>\verb! 1   3  -1  -3   5  [3   6   7]! &amp; 3 &amp; 7 \<br>\end{array}<br>$$</p>
+<img data-src="/images/Table_monotony.svg" style="display: block; margin: auto; height: 250px; background-color: grey" alt="过程"/>
+
 <p>伪代码：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">for i from 1 to n</span><br><span class="line">    while(!empty() &amp;&amp; a[back()] &gt;= a[i])</span><br><span class="line">        pop_back()</span><br><span class="line">    push_back(i)</span><br><span class="line">    while(back() - front() &gt;= k)    </span><br><span class="line">        pop_front()</span><br><span class="line">    ouput(front())</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
@@ -382,14 +385,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/%E7%AC%94%E8%AE%B0/two%20pointers/" rel="prev" title="双指针（尺取法）">
-                  <i class="fa fa-angle-left"></i> 双指针（尺取法）
+                <a href="/uncategorized/binary%20search/" rel="prev" title="二分和三分">
+                  <i class="fa fa-angle-left"></i> 二分和三分
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/uncategorized/binary%20search/" rel="next" title="">
-                   <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -429,7 +429,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">23 分钟</span>
+    <span title="站点阅读时长">22 分钟</span>
   </span>
 </div>
 

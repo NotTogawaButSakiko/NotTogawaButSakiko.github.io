@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<svg xmlns="http://www.w3.org/2000/svg" width="55.873ex" height="23.509ex" viewBox="0 -5445.5 24695.8 10391" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" style=""><style>
+mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] &gt; svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] &gt; svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] &gt; g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] &gt; rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] &gt; line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] &gt; rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] &gt; .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] &gt; .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] &gt; g &gt; svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool &gt; mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool &gt; mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+</style><defs><path id="MJX-1-TEX-M-5B" d="M237 -82Q221 -78 214 -58V305Q214 669 216 673Q220 687 231 690T278 694H350H461Q462 693 467 690T474 685T478 679T482 670T483 656Q483 632 471 625T428 617Q422 617 406 617T379 618H298V-7H379H420Q459 -7 471 -13T483 -45Q483 -55 483 -59T477 -70T461 -82H237Z"></path><path id="MJX-1-TEX-M-1D7F7" d="M99 461Q99 470 99 474T104 487T120 498T151 502Q213 517 251 596Q264 622 283 622Q308 622 319 597V76H373H401Q428 76 439 69T450 38Q450 11 428 1H127Q104 10 104 38Q104 62 115 69T153 76H181H235V269Q235 461 234 461Q184 426 137 424H133Q124 424 119 425T109 431T99 447V461Z"></path><path id="MJX-1-TEX-M-A0" d=""></path><path id="MJX-1-TEX-M-1D7F9" d="M260 546Q233 546 211 541T180 531T171 524L174 514Q177 505 177 497Q177 476 162 461T125 446Q106 446 90 459T73 504Q76 540 98 565T150 601T203 616T239 621Q241 622 265 622Q322 620 362 602T420 558T444 513T451 478Q451 386 369 329L375 326Q381 323 386 320T401 311T419 298T436 283T452 263T466 240T475 212T479 180Q479 99 416 44T259 -11T105 28T44 130Q44 154 59 168T95 183Q117 183 132 169T148 131Q148 119 139 101Q175 65 260 65Q316 65 355 97T395 179Q395 211 375 240Q336 292 253 292H234H215Q194 292 185 299T175 330Q175 350 184 359Q192 368 238 370T309 384Q336 398 351 423T367 474Q367 496 350 513Q321 546 260 546Z"></path><path id="MJX-1-TEX-M-2D" d="M57 306Q57 333 86 341H438Q468 332 468 306T438 271H86Q57 280 57 306Z"></path><path id="MJX-1-TEX-M-5D" d="M41 656Q41 681 53 688T99 695Q107 695 133 695T177 694H288Q307 681 310 669V-58Q303 -76 288 -82H64Q41 -73 41 -45Q41 -21 53 -14T96 -6Q102 -6 118 -6T145 -7H226V618H145H100Q67 618 54 625T41 656Z"></path><path id="MJX-1-TEX-M-1D7FB" d="M387 189Q387 244 354 278T273 313Q230 313 205 301T163 271T138 249H120Q102 249 97 251Q85 258 83 266T80 311Q80 320 80 359T81 430Q81 587 82 591Q88 605 103 610H108Q112 610 120 610T138 610T163 610T192 611T225 611T260 611H415Q416 610 421 607T428 602T432 596T436 587T437 573Q437 567 437 562T434 554T431 548T427 543T423 540T418 538L415 536L289 535H164V363L170 366Q175 368 184 372T207 380T238 386T276 389Q357 389 414 331T472 187Q472 116 412 53T245 -10Q218 -10 209 -9Q126 5 89 48T52 137Q52 164 68 177T104 191Q130 191 143 175T156 141Q156 132 154 125T149 113T146 107Q146 104 155 95T188 76T245 65Q298 65 342 98T387 189Z"></path><path id="MJX-1-TEX-M-1D7FC" d="M357 536Q357 546 318 546Q258 546 205 497T133 357V353L144 361Q210 402 285 402Q362 402 414 350Q479 285 479 193Q479 111 418 50T263 -11Q234 -11 207 -3T149 26T97 81T60 171T45 301Q45 444 129 533T319 622Q388 622 421 589T454 510Q454 491 442 475T402 458Q373 458 362 475T350 510Q350 520 354 528L357 536ZM319 326T269 326T179 298T136 223Q136 202 143 174T176 112T237 68Q246 66 265 66Q319 66 360 107Q395 146 395 197Q395 250 356 289Q319 326 269 326Z"></path><path id="MJX-1-TEX-M-1D7FD" d="M204 -10Q162 -10 162 40Q162 146 198 261T310 477Q311 478 321 491T342 517T358 535H128V524Q128 506 119 497Q111 489 86 489H78Q55 489 46 508Q44 513 44 557V580Q44 605 52 616T88 627H93Q114 627 125 611H458Q474 598 477 593T480 573Q480 559 478 553T469 543T446 521T408 477Q252 290 246 49Q246 43 246 37T246 27T245 22Q243 11 233 1T204 -10Z"></path><path id="MJX-1-TEX-N-2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path><path id="MJX-1-TEX-N-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path id="MJX-1-TEX-N-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path><path id="MJX-1-TEX-N-35" d="M164 157Q164 133 148 117T109 101H102Q148 22 224 22Q294 22 326 82Q345 115 345 210Q345 313 318 349Q292 382 260 382H254Q176 382 136 314Q132 307 129 306T114 304Q97 304 95 310Q93 314 93 485V614Q93 664 98 664Q100 666 102 666Q103 666 123 658T178 642T253 634Q324 634 389 662Q397 666 402 666Q410 666 410 648V635Q328 538 205 538Q174 538 149 544L139 546V374Q158 388 169 396T205 412T256 420Q337 420 393 355T449 201Q449 109 385 44T229 -22Q148 -22 99 32T50 154Q50 178 61 192T84 210T107 214Q132 214 148 197T164 157Z"></path><path id="MJX-1-TEX-N-36" d="M42 313Q42 476 123 571T303 666Q372 666 402 630T432 550Q432 525 418 510T379 495Q356 495 341 509T326 548Q326 592 373 601Q351 623 311 626Q240 626 194 566Q147 500 147 364L148 360Q153 366 156 373Q197 433 263 433H267Q313 433 348 414Q372 400 396 374T435 317Q456 268 456 210V192Q456 169 451 149Q440 90 387 34T253 -22Q225 -22 199 -14T143 16T92 75T56 172T42 313ZM257 397Q227 397 205 380T171 335T154 278T148 216Q148 133 160 97T198 39Q222 21 251 21Q302 21 329 59Q342 77 347 104T352 209Q352 289 347 316T329 361Q302 397 257 397Z"></path><path id="MJX-1-TEX-N-37" d="M55 458Q56 460 72 567L88 674Q88 676 108 676H128V672Q128 662 143 655T195 646T364 644H485V605L417 512Q408 500 387 472T360 435T339 403T319 367T305 330T292 284T284 230T278 162T275 80Q275 66 275 52T274 28V19Q270 2 255 -10T221 -22Q210 -22 200 -19T179 0T168 40Q168 198 265 368Q285 400 349 489L395 552H302Q128 552 119 546Q113 543 108 522T98 479L95 458V455H55V458Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><g data-mml-node="math"><g data-mml-node="mtable"><g data-mml-node="mtr" transform="translate(0, 4410)"><g data-mml-node="mtd" transform="translate(6839.5, 0)"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mtext"><text data-variant="sans-serif" transform="matrix(1 0 0 -1 0 0)" font-size="884px" font-family="sans-serif">窗</text><text data-variant="sans-serif" transform="translate(884, 0) matrix(1 0 0 -1 0 0)" font-size="884px" font-family="sans-serif">口</text><text data-variant="sans-serif" transform="translate(1768, 0) matrix(1 0 0 -1 0 0)" font-size="884px" font-family="sans-serif">位</text><text data-variant="sans-serif" transform="translate(2652, 0) matrix(1 0 0 -1 0 0)" font-size="884px" font-family="sans-serif">置</text></g></g></g><g data-mml-node="mtd" transform="translate(17815, 0)"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mtext"><text data-variant="sans-serif" transform="matrix(1 0 0 -1 0 0)" font-size="884px" font-family="sans-serif">最</text><text data-variant="sans-serif" transform="translate(884, 0) matrix(1 0 0 -1 0 0)" font-size="884px" font-family="sans-serif">小</text><text data-variant="sans-serif" transform="translate(1768, 0) matrix(1 0 0 -1 0 0)" font-size="884px" font-family="sans-serif">值</text></g></g></g><g data-mml-node="mtd" transform="translate(21537, 0)"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mtext"><text data-variant="sans-serif" transform="matrix(1 0 0 -1 0 0)" font-size="884px" font-family="sans-serif">最</text><text data-variant="sans-serif" transform="translate(884, 0) matrix(1 0 0 -1 0 0)" font-size="884px" font-family="sans-serif">大</text><text data-variant="sans-serif" transform="translate(1804.8, 0) matrix(1 0 0 -1 0 0)" font-size="884px" font-family="sans-serif">值</text></g></g></g></g><g data-mml-node="mtr" transform="translate(0, 2940)"><g data-mml-node="mtd" transform="translate(470, 0)"><g data-mml-node="mtext"><use xlink:href="#MJX-1-TEX-M-5B"></use><use xlink:href="#MJX-1-TEX-M-1D7F7" transform="translate(525, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(1050, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(1575, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(2100, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7F9" transform="translate(2625, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(3150, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(3675, 0)"></use><use xlink:href="#MJX-1-TEX-M-2D" transform="translate(4200, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7F7" transform="translate(4725, 0)"></use><use xlink:href="#MJX-1-TEX-M-5D" transform="translate(5250, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(5775, 0)"></use><use xlink:href="#MJX-1-TEX-M-2D" transform="translate(6300, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7F9" transform="translate(6825, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(7350, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(7875, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(8400, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7FB" transform="translate(8925, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(9450, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(9975, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(10500, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7F9" transform="translate(11025, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(11550, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(12075, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(12600, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7FC" transform="translate(13125, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(13650, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(14175, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(14700, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7FD" transform="translate(15225, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(15750, 0)"></use></g></g><g data-mml-node="mtd" transform="translate(18502, 0)"><g data-mml-node="mo"><use xlink:href="#MJX-1-TEX-N-2212"></use></g><g data-mml-node="mn" transform="translate(778, 0)"><use xlink:href="#MJX-1-TEX-N-31"></use></g></g><g data-mml-node="mtd" transform="translate(22631.4, 0)"><g data-mml-node="mn"><use xlink:href="#MJX-1-TEX-N-33"></use></g></g></g><g data-mml-node="mtr" transform="translate(0, 1470)"><g data-mml-node="mtd" transform="translate(470, 0)"><g data-mml-node="mtext"><use xlink:href="#MJX-1-TEX-M-A0"></use><use xlink:href="#MJX-1-TEX-M-1D7F7" transform="translate(525, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(1050, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(1575, 0)"></use><use xlink:href="#MJX-1-TEX-M-5B" transform="translate(2100, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7F9" transform="translate(2625, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(3150, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(3675, 0)"></use><use xlink:href="#MJX-1-TEX-M-2D" transform="translate(4200, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7F7" transform="translate(4725, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(5250, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(5775, 0)"></use><use xlink:href="#MJX-1-TEX-M-2D" transform="translate(6300, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7F9" transform="translate(6825, 0)"></use><use xlink:href="#MJX-1-TEX-M-5D" transform="translate(7350, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(7875, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(8400, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7FB" transform="translate(8925, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(9450, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(9975, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(10500, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7F9" transform="translate(11025, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(11550, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(12075, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(12600, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7FC" transform="translate(13125, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(13650, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(14175, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(14700, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7FD" transform="translate(15225, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(15750, 0)"></use></g></g><g data-mml-node="mtd" transform="translate(18502, 0)"><g data-mml-node="mo"><use xlink:href="#MJX-1-TEX-N-2212"></use></g><g data-mml-node="mn" transform="translate(778, 0)"><use xlink:href="#MJX-1-TEX-N-33"></use></g></g><g data-mml-node="mtd" transform="translate(22631.4, 0)"><g data-mml-node="mn"><use xlink:href="#MJX-1-TEX-N-33"></use></g></g></g><g data-mml-node="mtr" transform="translate(0, 0)"><g data-mml-node="mtd" transform="translate(470, 0)"><g data-mml-node="mtext"><use xlink:href="#MJX-1-TEX-M-A0"></use><use xlink:href="#MJX-1-TEX-M-1D7F7" transform="translate(525, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(1050, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(1575, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(2100, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7F9" transform="translate(2625, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(3150, 0)"></use><use xlink:href="#MJX-1-TEX-M-5B" transform="translate(3675, 0)"></use><use xlink:href="#MJX-1-TEX-M-2D" transform="translate(4200, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7F7" transform="translate(4725, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(5250, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(5775, 0)"></use><use xlink:href="#MJX-1-TEX-M-2D" transform="translate(6300, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7F9" transform="translate(6825, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(7350, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(7875, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(8400, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7FB" transform="translate(8925, 0)"></use><use xlink:href="#MJX-1-TEX-M-5D" transform="translate(9450, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(9975, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(10500, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7F9" transform="translate(11025, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(11550, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(12075, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(12600, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7FC" transform="translate(13125, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(13650, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(14175, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(14700, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7FD" transform="translate(15225, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(15750, 0)"></use></g></g><g data-mml-node="mtd" transform="translate(18502, 0)"><g data-mml-node="mo"><use xlink:href="#MJX-1-TEX-N-2212"></use></g><g data-mml-node="mn" transform="translate(778, 0)"><use xlink:href="#MJX-1-TEX-N-33"></use></g></g><g data-mml-node="mtd" transform="translate(22631.4, 0)"><g data-mml-node="mn"><use xlink:href="#MJX-1-TEX-N-35"></use></g></g></g><g data-mml-node="mtr" transform="translate(0, -1470)"><g data-mml-node="mtd" transform="translate(470, 0)"><g data-mml-node="mtext"><use xlink:href="#MJX-1-TEX-M-A0"></use><use xlink:href="#MJX-1-TEX-M-1D7F7" transform="translate(525, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(1050, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(1575, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(2100, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7F9" transform="translate(2625, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(3150, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(3675, 0)"></use><use xlink:href="#MJX-1-TEX-M-2D" transform="translate(4200, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7F7" transform="translate(4725, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(5250, 0)"></use><use xlink:href="#MJX-1-TEX-M-5B" transform="translate(5775, 0)"></use><use xlink:href="#MJX-1-TEX-M-2D" transform="translate(6300, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7F9" transform="translate(6825, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(7350, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(7875, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(8400, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7FB" transform="translate(8925, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(9450, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(9975, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(10500, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7F9" transform="translate(11025, 0)"></use><use xlink:href="#MJX-1-TEX-M-5D" transform="translate(11550, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(12075, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(12600, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7FC" transform="translate(13125, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(13650, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(14175, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(14700, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7FD" transform="translate(15225, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(15750, 0)"></use></g></g><g data-mml-node="mtd" transform="translate(18502, 0)"><g data-mml-node="mo"><use xlink:href="#MJX-1-TEX-N-2212"></use></g><g data-mml-node="mn" transform="translate(778, 0)"><use xlink:href="#MJX-1-TEX-N-33"></use></g></g><g data-mml-node="mtd" transform="translate(22631.4, 0)"><g data-mml-node="mn"><use xlink:href="#MJX-1-TEX-N-35"></use></g></g></g><g data-mml-node="mtr" transform="translate(0, -2940)"><g data-mml-node="mtd" transform="translate(470, 0)"><g data-mml-node="mtext"><use xlink:href="#MJX-1-TEX-M-A0"></use><use xlink:href="#MJX-1-TEX-M-1D7F7" transform="translate(525, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(1050, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(1575, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(2100, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7F9" transform="translate(2625, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(3150, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(3675, 0)"></use><use xlink:href="#MJX-1-TEX-M-2D" transform="translate(4200, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7F7" transform="translate(4725, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(5250, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(5775, 0)"></use><use xlink:href="#MJX-1-TEX-M-2D" transform="translate(6300, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7F9" transform="translate(6825, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(7350, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(7875, 0)"></use><use xlink:href="#MJX-1-TEX-M-5B" transform="translate(8400, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7FB" transform="translate(8925, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(9450, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(9975, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(10500, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7F9" transform="translate(11025, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(11550, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(12075, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(12600, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7FC" transform="translate(13125, 0)"></use><use xlink:href="#MJX-1-TEX-M-5D" transform="translate(13650, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(14175, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(14700, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7FD" transform="translate(15225, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(15750, 0)"></use></g></g><g data-mml-node="mtd" transform="translate(18891, 0)"><g data-mml-node="mn"><use xlink:href="#MJX-1-TEX-N-33"></use></g></g><g data-mml-node="mtd" transform="translate(22631.4, 0)"><g data-mml-node="mn"><use xlink:href="#MJX-1-TEX-N-36"></use></g></g></g><g data-mml-node="mtr" transform="translate(0, -4410)"><g data-mml-node="mtd" transform="translate(470, 0)"><g data-mml-node="mtext"><use xlink:href="#MJX-1-TEX-M-A0"></use><use xlink:href="#MJX-1-TEX-M-1D7F7" transform="translate(525, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(1050, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(1575, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(2100, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7F9" transform="translate(2625, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(3150, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(3675, 0)"></use><use xlink:href="#MJX-1-TEX-M-2D" transform="translate(4200, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7F7" transform="translate(4725, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(5250, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(5775, 0)"></use><use xlink:href="#MJX-1-TEX-M-2D" transform="translate(6300, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7F9" transform="translate(6825, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(7350, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(7875, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(8400, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7FB" transform="translate(8925, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(9450, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(9975, 0)"></use><use xlink:href="#MJX-1-TEX-M-5B" transform="translate(10500, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7F9" transform="translate(11025, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(11550, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(12075, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(12600, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7FC" transform="translate(13125, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(13650, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(14175, 0)"></use><use xlink:href="#MJX-1-TEX-M-A0" transform="translate(14700, 0)"></use><use xlink:href="#MJX-1-TEX-M-1D7FD" transform="translate(15225, 0)"></use><use xlink:href="#MJX-1-TEX-M-5D" transform="translate(15750, 0)"></use></g></g><g data-mml-node="mtd" transform="translate(18891, 0)"><g data-mml-node="mn"><use xlink:href="#MJX-1-TEX-N-33"></use></g></g><g data-mml-node="mtd" transform="translate(22631.4, 0)"><g data-mml-node="mn"><use xlink:href="#MJX-1-TEX-N-37"></use></g></g></g><line data-line="v" class="mjx-solid" x1="17280" y1="-4945.5" x2="17280" y2="5445.5"></line><line data-line="v" class="mjx-solid" x1="21002" y1="-4945.5" x2="21002" y2="5445.5"></line><line data-line="h" class="mjx-solid" x1="0" y1="3925" x2="24695.8" y2="3925"></line><line data-line="h" class="mjx-solid" x1="0" y1="2455" x2="24695.8" y2="2455"></line><line data-line="h" class="mjx-solid" x1="0" y1="985" x2="24695.8" y2="985"></line><line data-line="h" class="mjx-solid" x1="0" y1="-485" x2="24695.8" y2="-485"></line><line data-line="h" class="mjx-solid" x1="0" y1="-1955" x2="24695.8" y2="-1955"></line><line data-line="h" class="mjx-solid" x1="0" y1="-3425" x2="24695.8" y2="-3425"></line><rect data-frame="true" class="mjx-solid" width="24625.8" height="10321" x="35" y="-4910.5"></rect></g></g></g></svg>
